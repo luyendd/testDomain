@@ -1,0 +1,65 @@
+.basic-information {
+  .map-center {
+    height: 322px;
+  }
+
+  .video {
+    height: 527px;
+  }
+}
+.best-teacher {
+  margin-top: 15px;
+  position: relative;
+
+  .edu-title {
+      padding-bottom: 27px;
+  }
+
+  .course-list {
+    .course-item {
+        height: 306px;
+
+      .course-item-content {
+        &:hover {
+          opacity: 1;
+        }
+        .course-item-image {
+          .course-img-teacher {
+            bottom: calc(60% - 70px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            img {
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        .course-item-detail {
+          text-align: center;
+          justify-content: flex-start;
+
+          .course-item-detail-vote {
+            flex: none;
+            margin-top: 15px;
+          }
+
+          .course-item-detail-location {
+            flex: none;
+            margin-top: 14px;
+          }
+
+          .course-item-detail-bottom {
+            margin-top: 15px;
+            font-size: 14px;
+            flex: none;
+            color: #bbc8de;
+          }
+        }
+      }
+    }
+  }
+}

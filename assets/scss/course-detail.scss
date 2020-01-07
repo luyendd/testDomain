@@ -1,0 +1,687 @@
+.border {
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #bbc8de;
+  background-color: #ffffff;
+}
+
+.form-border {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+  border-bottom: solid 1px #bbc8de;
+  background-color: #ffffff;
+}
+
+.course-title {
+  color: #4d658b;
+  font-weight: bold;
+}
+
+.course-information .description,
+.rating .rating-content,
+.teacher-information > div {
+  padding: 7px 30px 21px 30px;
+  width: 100%;
+}
+
+.basic-information {
+  .course-title {
+    margin-top: 8px;
+    padding-bottom: 21px;
+  }
+  .top-bar {
+    display: flex;
+    flex-direction: row;
+    color: #4d658b;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    > div {
+      flex: 1;
+      text-align: center;
+      padding: 16px;
+      font-size: 14px;
+      margin-bottom: -3px;
+    }
+
+    .active {
+      color: #ef6f3c;
+      border-bottom: 3px solid #ef6f3c;
+      font-weight: bold;
+    }
+  }
+
+  .course-information {
+    margin-bottom: 30px;
+
+    .description {
+      .course-title {
+        margin-bottom: 0px;
+        padding-bottom: 27px;
+      }
+
+      p {
+        margin-bottom: 26px;
+      }
+
+      .more-btn {
+        border-radius: 5px;
+        background-color: #24a1ed;
+        color: #fff;
+        font-size: 14px;
+        padding: 8px 30px;
+        border: 0;
+        display: inherit;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .course-content {
+    .description {
+      padding-bottom: 0;
+      .course-title {
+        padding-bottom: 13px;
+      }
+    }
+  }
+
+  .teacher-information {
+    margin-bottom: 30px;
+
+    .teacher-information-content {
+      .header {
+        flex-direction: row;
+        justify-content: space-between;
+        display: flex;
+        align-items: baseline;
+
+        .course-title {
+          padding-bottom: 20px;
+        }
+
+        .detail-btn {
+          border-radius: 5px;
+          background-color: #fd6060;
+          border: 0;
+          width: 186px;
+          color: #fff;
+          font-size: 14px;
+          height: 35px;
+        }
+      }
+
+      .introduction {
+        flex-direction: row;
+        padding-bottom: 30px;
+        display: flex;
+
+        .teacher-avatar {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+          width: 84px;
+          height: 84px;
+          margin-right: 20px;
+        }
+
+        .detail {
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+
+          .intro-title {
+            font-size: 12px;
+            color: #343333;
+            margin-top: 3px;
+          }
+
+          .course-item-detail-vote {
+            font-size: 18px;
+          }
+
+          .intro-content {
+            font-size: 16px;
+            font-weight: bold;
+            color: #343333;
+            margin-top: 7px;
+            padding-left: 0;
+            margin-bottom: 2px;
+          }
+        }
+
+        .location {
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+
+          .intro-content {
+            padding-left: 0;
+            font-weight: bold;
+            margin-top: 7px;
+          }
+
+          .intro-title {
+            font-size: 12px;
+            margin-top: 3px;
+          }
+        }
+
+        .total {
+          flex: 3;
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 8px;
+
+          .total-number {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+          }
+          > div {
+            width: 186px;
+            height: 61px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #7bcdff;
+            color: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .story {
+        display: flex;
+        flex-direction: column;
+
+        .tc-info-story {
+          color: #fc4d6f;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .more-btn {
+      border-radius: 5px;
+      background-color: #24a1ed;
+      color: #fff;
+      font-size: 14px;
+      padding: 8px 30px;
+      border: 0;
+      display: inherit;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 30px;
+    }
+  }
+
+  .register {
+    position: relative;
+
+    .sticky-top {
+      top: 65px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+      border-radius: 5px;
+
+      .register-img {
+        background: linear-gradient(to bottom, #24a0edab, #4d658baf), url("../images/register-form.png");
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: 100% 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 15px;
+      }
+
+      .register-form {
+        padding-left: 25px;
+        padding-right: 25px;
+        color: #343333;
+
+        .register-form-header-item {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 4px;
+
+          .ed-ct-dt-price span:first-child {
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 10px;
+          }
+
+          .ed-ct-dt-price span {
+            font-size: 12px;
+          }
+
+          .big-icon {
+            font-size: 18px !important;
+          }
+
+          &.slot {
+            font-size: 12px;
+            margin-bottom: 12px;
+          }
+
+          > button {
+            flex: 1;
+            border-radius: 5px;
+            border: 0;
+            color: #fff;
+            height: 40px;
+            font-size: 14px;
+            font-weight: bold;
+          }
+
+          .register-trial-study-btn {
+            background-color: #3eb0f7;
+            margin-right: 20px;
+          }
+
+          .register-study-btn {
+            background-color: #fd6060;
+          }
+        }
+
+        .register-form-body {
+          padding-top: 25px;
+          display: flex;
+          flex-direction: column;
+          border-bottom: 1px solid #bbc8de;
+
+          .register-form-body-item {
+            flex: 1;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+
+            i {
+              width: 16px;
+              color: #4d658b;
+              font-size: 15px !important;
+            }
+
+            span {
+              font-size: 14px;
+              margin-left: 15px;
+            }
+          }
+        }
+
+        .register-form-footer {
+          padding-bottom: 10px;
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+
+          .hotline {
+            font-size: 23px;
+            color: #919191;
+
+            span {
+              font-weight: bold;
+              color: #fd3636;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.basic-question {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  .course-title {
+    padding: 10px 30px 7px 30px;
+    margin-bottom: 5px;
+  }
+
+  .question {
+    margin-top: 21px;
+    padding-bottom: 16px;
+    width: 100%;
+    align-self: center;
+    display: flex;
+
+    .like {
+      display: flex;
+      color: #758cb1;
+      flex-direction: column;
+      align-items: center;
+      font-size: 18px;
+
+      h1 {
+        font-size: 35px;
+        font-weight: bold;
+      }
+    }
+
+    .detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      span {
+        margin-bottom: 10px;
+      }
+
+      .question-title {
+        color: #24a1ed;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .question-answer {
+        color: #868585;
+        font-size: 14px;
+      }
+      .question-time-answered {
+        font-size: 12px;
+        color: #b0b4bc;
+      }
+
+      .question-btn {
+        > button {
+          font-size: 12px;
+          background-color: #fff;
+          border: 0;
+          color: #7a7d83;
+          padding-left: 0;
+          padding-right: 10px;
+
+          i {
+            margin-right: 10px;
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .view-all {
+    width: 100%;
+    align-self: center;
+    padding: 10px 30px;
+
+    .view-all-question {
+      font-size: 14px;
+    }
+  }
+
+  .question,
+  .view-all {
+    border-bottom: solid 1px #bbc8de;
+  }
+
+  .question-form {
+    width: 100%;
+    align-self: center;
+    padding: 13px 15px;
+    display: flex;
+
+    .question-text {
+      width: 100%;
+      border-radius: 5px;
+      border: solid 1px #cccaca;
+      height: 40px;
+      padding-left: 10px;
+      font-size: 14px;
+    }
+
+    .question-send-btn {
+      background-color: #ffc22c;
+      color: #fff;
+      border-radius: 5px;
+      border: 0;
+      height: 40px;
+      width: 100%;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+}
+
+.rating {
+  margin-bottom: 30px;
+  .rating-content {
+    .course-title {
+      margin-bottom: 15px;
+      padding-top: 10px;
+    }
+
+    .user-rating {
+      margin-bottom: 30px;
+      margin-top: 10px;
+      width: 100%;
+      align-self: center;
+      margin-bottom: 5px;
+      display: flex;
+
+      .vote {
+        display: flex;
+
+        .average-vote {
+          flex: 3;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 10px;
+          margin-right: 30px;
+
+          h1 {
+            color: #4d658b;
+            font-weight: bold;
+            font-size: 43px;
+          }
+
+          .course-item-detail-vote {
+            font-size: 18px;
+          }
+        }
+
+        .user-vote {
+          flex: 5;
+          display: flex;
+          flex-direction: column;
+
+          .vote-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+
+            .fas.fa-star {
+              font-size: 10px;
+              font-family: FontAwesome;
+              color: #ffc22c;
+              margin-right: 10px;
+              margin-left: 5px;
+            }
+
+            .vote-bar {
+              width: 164px;
+              height: 5px;
+              background-color: #b5b3b37e;
+
+              &.active {
+                background-color: #f77d7d;
+              }
+            }
+          }
+        }
+      }
+
+      .comment-content {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+
+        .comment-title {
+          color: #f77d7d;
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+
+        .course-item-detail-vote {
+          span {
+            color: #3433339d;
+            font-size: 14px;
+            margin-left: 10px;
+          }
+
+          .fas.fa-star {
+            color: #ffc22c;
+            margin-left: 0;
+          }
+        }
+
+        .comment-input {
+          margin-top: 10px;
+
+          textarea {
+            width: 100%;
+            height: 90px;
+            border-radius: 5px;
+            border: solid 1px #cccaca;
+            font-family: HelveticaNeue;
+            font-size: 14px;
+            padding-left: 15px;
+            line-height: 1.79;
+          }
+        }
+      }
+    }
+
+    .rating-btn {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+      margin-bottom: 22px;
+
+      .rating-filter-btn {
+        flex: 1;
+        display: flex;
+
+        > div {
+          border-radius: 5px;
+          border: solid 1px #707070;
+          color: #343333;
+          font-size: 12px;
+          height: 20px;
+          margin-right: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-left: 12px;
+          padding-right: 11px;
+        }
+      }
+
+      .rating-submit-btn {
+        width: 149px;
+        height: 39px;
+        border-radius: 5px;
+        border: solid 1px #707070;
+        background-color: #ffffff;
+        color: #343333;
+        font-weight: bold;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .rating-detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .rating-border {
+        border-top: 1px solid #cccaca;
+        width: 65%;
+        margin-bottom: 22px;
+      }
+
+      .rating-detail-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 20px;
+
+        .user-avatar {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          width: 47px;
+          height: 47px;
+          border-radius: 30px;
+          margin-right: 23px;
+        }
+
+        .description {
+          border-radius: 3px;
+          background-color: #edf1f7;
+
+          .username {
+            color: #24a1ed;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+
+            > * {
+              margin-left: 10px;
+              color: #00aa63;
+            }
+          }
+
+          .course-item-detail-vote {
+            font-size: 10px;
+
+            .fas.fa-star {
+              font-size: 10px;
+              color: #ffc22c;
+              margin: 0;
+            }
+          }
+
+          span {
+            font-size: 12px;
+            color: #868585;
+            margin-left: 10px;
+          }
+
+          .comment {
+            margin-top: 15px;
+            color: #868585;
+            font-size: 14px;
+            padding-bottom: 28px;
+          }
+        }
+      }
+    }
+  }
+}

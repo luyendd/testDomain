@@ -1,0 +1,51 @@
+.basic-information .map-center {
+  height: 322px;
+}
+.basic-information .video {
+  height: 527px;
+}
+
+.best-teacher {
+  margin-top: 15px;
+  position: relative;
+}
+.best-teacher .edu-title {
+  padding-bottom: 27px;
+}
+.best-teacher .course-list .course-item {
+  height: 306px;
+}
+.best-teacher .course-list .course-item .course-item-content:hover {
+  opacity: 1;
+}
+.best-teacher .course-list .course-item .course-item-content .course-item-image .course-img-teacher {
+  bottom: calc(60% - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.best-teacher .course-list .course-item .course-item-content .course-item-image .course-img-teacher img {
+  margin-bottom: 10px;
+}
+.best-teacher .course-list .course-item .course-item-content .course-item-detail {
+  text-align: center;
+  justify-content: flex-start;
+}
+.best-teacher .course-list .course-item .course-item-content .course-item-detail .course-item-detail-vote {
+  flex: none;
+  margin-top: 15px;
+}
+.best-teacher .course-list .course-item .course-item-content .course-item-detail .course-item-detail-location {
+  flex: none;
+  margin-top: 14px;
+}
+.best-teacher .course-list .course-item .course-item-content .course-item-detail .course-item-detail-bottom {
+  margin-top: 15px;
+  font-size: 14px;
+  flex: none;
+  color: #bbc8de;
+}
+
+/*# sourceMappingURL=center-detail.css.map */

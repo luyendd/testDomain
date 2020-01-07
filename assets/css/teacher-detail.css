@@ -1,0 +1,116 @@
+.basic-information .teacher-information {
+  margin-bottom: 22px;
+}
+.basic-information .teacher-information .teacher-information-content {
+  padding-bottom: 25px;
+}
+.basic-information .teacher-information .teacher-information-content .story span {
+  margin-bottom: 15px;
+}
+.basic-information .teacher-information .more-btn {
+  padding: 8px 41px;
+}
+.basic-information .video {
+  margin-bottom: 30px;
+  border-radius: 0;
+  height: 421px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.basic-information .register .register-form-border {
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #bbc8de;
+}
+.basic-information .register .register-form-border .register-form .course-title {
+  padding-bottom: 11px;
+  margin-top: 13px;
+  margin-bottom: 0;
+  border-bottom: solid 1px #70707091;
+}
+.basic-information .register .register-form-border .register-form .register-form-body {
+  padding-top: 17px;
+}
+.basic-information .register .register-form-border .register-form .register-form-body .register-form-body-item {
+  border-radius: 2px;
+  border: solid 1px #bbc8de;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 13px;
+}
+.basic-information .register .register-form-border .register-form .register-form-body .register-form-body-item > input {
+  border: 0;
+  background-color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 5px;
+  color: #818181;
+  font-size: 12px;
+  text-transform: uppercase;
+  width: calc(100% - 20px);
+}
+.basic-information .register .register-form-border .register-form .register-form-body .register-form-body-item .value {
+  font-size: 16px;
+  color: #4d658b;
+  text-transform: none;
+  margin-bottom: 12px;
+}
+.basic-information .register .register-form-border .register-form .register-form-body .register-form-header-item {
+  padding-bottom: 14px;
+}
+.basic-information .register .register-form-border .register-form .register-form-body .register-form-header-item .chat-btn {
+  background-color: #4d658b;
+  margin-right: 20px;
+}
+
+.best-course, .best-teacher {
+  padding-top: 3px;
+  padding-bottom: 0;
+}
+.best-course .edu-title, .best-teacher .edu-title {
+  align-items: baseline;
+}
+.best-course .edu-title h3, .best-teacher .edu-title h3 {
+  font-weight: bold;
+  color: #4d658b;
+  padding: 0;
+}
+.best-course .edu-title a, .best-teacher .edu-title a {
+  padding: 0;
+}
+.best-course .edu-content, .best-teacher .edu-content {
+  position: relative;
+}
+.best-course .edu-content .slide-btn, .best-teacher .edu-content .slide-btn {
+  position: absolute;
+  top: calc(50% - 44px);
+  width: 44px;
+  height: 44px;
+  z-index: 10;
+}
+.best-course .edu-content .slide-btn i, .best-teacher .edu-content .slide-btn i {
+  color: #000;
+  border-radius: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  height: 100%;
+}
+.best-course .edu-content .slide-btn .fa-chevron-left, .best-teacher .edu-content .slide-btn .fa-chevron-left {
+  padding-right: 5px;
+}
+.best-course .edu-content .slide-btn .fa-chevron-right, .best-teacher .edu-content .slide-btn .fa-chevron-right {
+  padding-left: 3px;
+}
+.best-course .edu-content .slide-btn.previous-btn, .best-teacher .edu-content .slide-btn.previous-btn {
+  left: 9px;
+}
+.best-course .edu-content .slide-btn.next-btn, .best-teacher .edu-content .slide-btn.next-btn {
+  right: 9px;
+}
+
+/*# sourceMappingURL=teacher-detail.css.map */

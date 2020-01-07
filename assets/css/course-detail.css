@@ -1,0 +1,584 @@
+.border {
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #bbc8de;
+  background-color: #ffffff;
+}
+
+.form-border {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+  border-bottom: solid 1px #bbc8de;
+  background-color: #ffffff;
+}
+
+.course-title {
+  color: #4d658b;
+  font-weight: bold;
+}
+
+.course-information .description,
+.rating .rating-content,
+.teacher-information > div {
+  padding: 7px 30px 21px 30px;
+  width: 100%;
+}
+
+.basic-information .course-title {
+  margin-top: 8px;
+  padding-bottom: 21px;
+}
+.basic-information .top-bar {
+  display: flex;
+  flex-direction: row;
+  color: #4d658b;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.basic-information .top-bar > div {
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  margin-bottom: -3px;
+}
+.basic-information .top-bar .active {
+  color: #ef6f3c;
+  border-bottom: 3px solid #ef6f3c;
+  font-weight: bold;
+}
+.basic-information .course-information {
+  margin-bottom: 30px;
+}
+.basic-information .course-information .description .course-title {
+  margin-bottom: 0px;
+  padding-bottom: 27px;
+}
+.basic-information .course-information .description p {
+  margin-bottom: 26px;
+}
+.basic-information .course-information .description .more-btn {
+  border-radius: 5px;
+  background-color: #24a1ed;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 30px;
+  border: 0;
+  display: inherit;
+  margin-right: auto;
+  margin-left: auto;
+}
+.basic-information .course-content .description {
+  padding-bottom: 0;
+}
+.basic-information .course-content .description .course-title {
+  padding-bottom: 13px;
+}
+.basic-information .teacher-information {
+  margin-bottom: 30px;
+}
+.basic-information .teacher-information .teacher-information-content .header {
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  align-items: baseline;
+}
+.basic-information .teacher-information .teacher-information-content .header .course-title {
+  padding-bottom: 20px;
+}
+.basic-information .teacher-information .teacher-information-content .header .detail-btn {
+  border-radius: 5px;
+  background-color: #fd6060;
+  border: 0;
+  width: 186px;
+  color: #fff;
+  font-size: 14px;
+  height: 35px;
+}
+.basic-information .teacher-information .teacher-information-content .introduction {
+  flex-direction: row;
+  padding-bottom: 30px;
+  display: flex;
+}
+.basic-information .teacher-information .teacher-information-content .introduction .teacher-avatar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 84px;
+  height: 84px;
+  margin-right: 20px;
+}
+.basic-information .teacher-information .teacher-information-content .introduction .detail {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.basic-information .teacher-information .teacher-information-content .introduction .detail .intro-title {
+  font-size: 12px;
+  color: #343333;
+  margin-top: 3px;
+}
+.basic-information .teacher-information .teacher-information-content .introduction .detail .course-item-detail-vote {
+  font-size: 18px;
+}
+.basic-information .teacher-information .teacher-information-content .introduction .detail .intro-content {
+  font-size: 16px;
+  font-weight: bold;
+  color: #343333;
+  margin-top: 7px;
+  padding-left: 0;
+  margin-bottom: 2px;
+}
+.basic-information .teacher-information .teacher-information-content .introduction .location {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.basic-information .teacher-information .teacher-information-content .introduction .location .intro-content {
+  padding-left: 0;
+  font-weight: bold;
+  margin-top: 7px;
+}
+.basic-information .teacher-information .teacher-information-content .introduction .location .intro-title {
+  font-size: 12px;
+  margin-top: 3px;
+}
+.basic-information .teacher-information .teacher-information-content .introduction .total {
+  flex: 3;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+.basic-information .teacher-information .teacher-information-content .introduction .total .total-number {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.basic-information .teacher-information .teacher-information-content .introduction .total > div {
+  width: 186px;
+  height: 61px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #7bcdff;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.basic-information .teacher-information .teacher-information-content .story {
+  display: flex;
+  flex-direction: column;
+}
+.basic-information .teacher-information .teacher-information-content .story .tc-info-story {
+  color: #fc4d6f;
+  font-weight: bold;
+}
+.basic-information .teacher-information .more-btn {
+  border-radius: 5px;
+  background-color: #24a1ed;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 30px;
+  border: 0;
+  display: inherit;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+}
+.basic-information .register {
+  position: relative;
+}
+.basic-information .register .sticky-top {
+  top: 65px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  border-radius: 5px;
+}
+.basic-information .register .sticky-top .register-img {
+  background: linear-gradient(to bottom, #24a0edab, #4d658baf), url("../images/register-form.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 100% 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+}
+.basic-information .register .sticky-top .register-form {
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #343333;
+}
+.basic-information .register .sticky-top .register-form .register-form-header-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4px;
+}
+.basic-information .register .sticky-top .register-form .register-form-header-item .ed-ct-dt-price span:first-child {
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.basic-information .register .sticky-top .register-form .register-form-header-item .ed-ct-dt-price span {
+  font-size: 12px;
+}
+.basic-information .register .sticky-top .register-form .register-form-header-item .big-icon {
+  font-size: 18px !important;
+}
+.basic-information .register .sticky-top .register-form .register-form-header-item.slot {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.basic-information .register .sticky-top .register-form .register-form-header-item > button {
+  flex: 1;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.basic-information .register .sticky-top .register-form .register-form-header-item .register-trial-study-btn {
+  background-color: #3eb0f7;
+  margin-right: 20px;
+}
+.basic-information .register .sticky-top .register-form .register-form-header-item .register-study-btn {
+  background-color: #fd6060;
+}
+.basic-information .register .sticky-top .register-form .register-form-body {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #bbc8de;
+}
+.basic-information .register .sticky-top .register-form .register-form-body .register-form-body-item {
+  flex: 1;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.basic-information .register .sticky-top .register-form .register-form-body .register-form-body-item i {
+  width: 16px;
+  color: #4d658b;
+  font-size: 15px !important;
+}
+.basic-information .register .sticky-top .register-form .register-form-body .register-form-body-item span {
+  font-size: 14px;
+  margin-left: 15px;
+}
+.basic-information .register .sticky-top .register-form .register-form-footer {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.basic-information .register .sticky-top .register-form .register-form-footer .hotline {
+  font-size: 23px;
+  color: #919191;
+}
+.basic-information .register .sticky-top .register-form .register-form-footer .hotline span {
+  font-weight: bold;
+  color: #fd3636;
+}
+
+.basic-question {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.basic-question .course-title {
+  padding: 10px 30px 7px 30px;
+  margin-bottom: 5px;
+}
+.basic-question .question {
+  margin-top: 21px;
+  padding-bottom: 16px;
+  width: 100%;
+  align-self: center;
+  display: flex;
+}
+.basic-question .question .like {
+  display: flex;
+  color: #758cb1;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
+.basic-question .question .like h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.basic-question .question .detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.basic-question .question .detail span {
+  margin-bottom: 10px;
+}
+.basic-question .question .detail .question-title {
+  color: #24a1ed;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.basic-question .question .detail .question-answer {
+  color: #868585;
+  font-size: 14px;
+}
+.basic-question .question .detail .question-time-answered {
+  font-size: 12px;
+  color: #b0b4bc;
+}
+.basic-question .question .detail .question-btn > button {
+  font-size: 12px;
+  background-color: #fff;
+  border: 0;
+  color: #7a7d83;
+  padding-left: 0;
+  padding-right: 10px;
+}
+.basic-question .question .detail .question-btn > button i {
+  margin-right: 10px;
+  width: 12px;
+  height: 12px;
+}
+.basic-question .view-all {
+  width: 100%;
+  align-self: center;
+  padding: 10px 30px;
+}
+.basic-question .view-all .view-all-question {
+  font-size: 14px;
+}
+.basic-question .question,
+.basic-question .view-all {
+  border-bottom: solid 1px #bbc8de;
+}
+.basic-question .question-form {
+  width: 100%;
+  align-self: center;
+  padding: 13px 15px;
+  display: flex;
+}
+.basic-question .question-form .question-text {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px #cccaca;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.basic-question .question-form .question-send-btn {
+  background-color: #ffc22c;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  height: 40px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.rating {
+  margin-bottom: 30px;
+}
+.rating .rating-content .course-title {
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+.rating .rating-content .user-rating {
+  margin-bottom: 30px;
+  margin-top: 10px;
+  width: 100%;
+  align-self: center;
+  margin-bottom: 5px;
+  display: flex;
+}
+.rating .rating-content .user-rating .vote {
+  display: flex;
+}
+.rating .rating-content .user-rating .vote .average-vote {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  margin-right: 30px;
+}
+.rating .rating-content .user-rating .vote .average-vote h1 {
+  color: #4d658b;
+  font-weight: bold;
+  font-size: 43px;
+}
+.rating .rating-content .user-rating .vote .average-vote .course-item-detail-vote {
+  font-size: 18px;
+}
+.rating .rating-content .user-rating .vote .user-vote {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+}
+.rating .rating-content .user-rating .vote .user-vote .vote-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.rating .rating-content .user-rating .vote .user-vote .vote-item .fas.fa-star {
+  font-size: 10px;
+  font-family: FontAwesome;
+  color: #ffc22c;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.rating .rating-content .user-rating .vote .user-vote .vote-item .vote-bar {
+  width: 164px;
+  height: 5px;
+  background-color: #b5b3b37e;
+}
+.rating .rating-content .user-rating .vote .user-vote .vote-item .vote-bar.active {
+  background-color: #f77d7d;
+}
+.rating .rating-content .user-rating .comment-content {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
+}
+.rating .rating-content .user-rating .comment-content .comment-title {
+  color: #f77d7d;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.rating .rating-content .user-rating .comment-content .course-item-detail-vote span {
+  color: #3433339d;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.rating .rating-content .user-rating .comment-content .course-item-detail-vote .fas.fa-star {
+  color: #ffc22c;
+  margin-left: 0;
+}
+.rating .rating-content .user-rating .comment-content .comment-input {
+  margin-top: 10px;
+}
+.rating .rating-content .user-rating .comment-content .comment-input textarea {
+  width: 100%;
+  height: 90px;
+  border-radius: 5px;
+  border: solid 1px #cccaca;
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  padding-left: 15px;
+  line-height: 1.79;
+}
+.rating .rating-content .rating-btn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 22px;
+}
+.rating .rating-content .rating-btn .rating-filter-btn {
+  flex: 1;
+  display: flex;
+}
+.rating .rating-content .rating-btn .rating-filter-btn > div {
+  border-radius: 5px;
+  border: solid 1px #707070;
+  color: #343333;
+  font-size: 12px;
+  height: 20px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 11px;
+}
+.rating .rating-content .rating-btn .rating-submit-btn {
+  width: 149px;
+  height: 39px;
+  border-radius: 5px;
+  border: solid 1px #707070;
+  background-color: #ffffff;
+  color: #343333;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rating .rating-content .rating-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rating .rating-content .rating-detail .rating-border {
+  border-top: 1px solid #cccaca;
+  width: 65%;
+  margin-bottom: 22px;
+}
+.rating .rating-content .rating-detail .rating-detail-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.rating .rating-content .rating-detail .rating-detail-item .user-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 47px;
+  height: 47px;
+  border-radius: 30px;
+  margin-right: 23px;
+}
+.rating .rating-content .rating-detail .rating-detail-item .description {
+  border-radius: 3px;
+  background-color: #edf1f7;
+}
+.rating .rating-content .rating-detail .rating-detail-item .description .username {
+  color: #24a1ed;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.rating .rating-content .rating-detail .rating-detail-item .description .username > * {
+  margin-left: 10px;
+  color: #00aa63;
+}
+.rating .rating-content .rating-detail .rating-detail-item .description .course-item-detail-vote {
+  font-size: 10px;
+}
+.rating .rating-content .rating-detail .rating-detail-item .description .course-item-detail-vote .fas.fa-star {
+  font-size: 10px;
+  color: #ffc22c;
+  margin: 0;
+}
+.rating .rating-content .rating-detail .rating-detail-item .description span {
+  font-size: 12px;
+  color: #868585;
+  margin-left: 10px;
+}
+.rating .rating-content .rating-detail .rating-detail-item .description .comment {
+  margin-top: 15px;
+  color: #868585;
+  font-size: 14px;
+  padding-bottom: 28px;
+}
+
+/*# sourceMappingURL=course-detail.css.map */

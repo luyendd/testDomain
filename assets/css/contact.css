@@ -1,0 +1,126 @@
+.contact-map {
+  background-image: url("../images/map.png");
+  background-size: cover;
+  background-position: bottom center;
+  margin-bottom: 44px;
+  height: 572px;
+}
+
+.contact-content {
+  flex-direction: row;
+}
+.contact-content .info {
+  margin-right: 70px;
+  margin-top: 5px;
+}
+.contact-content .info h3 {
+  font-weight: bold;
+  color: #0091ea;
+}
+.contact-content .info h6 {
+  color: #4d658b;
+  font-weight: bold;
+}
+.contact-content .info p {
+  padding-top: 18px;
+  font-size: 14px;
+  color: #758cb1;
+  padding-bottom: 18px;
+  background-image: linear-gradient(to right, #c9c4c4 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 32px 1px;
+  background-repeat: repeat-x;
+  margin-bottom: 32px;
+}
+.contact-content .info .info-item {
+  margin-bottom: 30px;
+}
+.contact-content .info .info-item i {
+  width: 15px;
+  font-size: 22px;
+  margin-right: 25px;
+  color: #4d658b;
+}
+.contact-content .info .info-item span {
+  font-size: 14px;
+  color: #343333;
+}
+.contact-content .info .info-item .hot-line {
+  color: #fa4545 !important;
+}
+.contact-content .contact-content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.contact-content .contact-content-right h4 {
+  color: #4d658b;
+  font-weight: bold;
+  margin-bottom: 22px;
+}
+.contact-content .contact-content-right .contact-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.contact-content .contact-content-right .contact-form > div {
+  margin-bottom: 15px;
+}
+.contact-content .contact-content-right .contact-form > div:last-child {
+  align-self: flex-end;
+}
+.contact-content .contact-content-right .contact-form .form-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contact-content .contact-content-right .contact-form .form-item > div {
+  position: relative;
+}
+.contact-content .contact-content-right .contact-form .form-item .required {
+  color: #343333;
+  font-size: 14px;
+  position: absolute;
+  left: 30px;
+  top: 15px;
+}
+.contact-content .contact-content-right .contact-form .form-item .required span {
+  color: #fd3636;
+}
+.contact-content .contact-content-right .contact-form input,
+.contact-content .contact-content-right .contact-form textarea {
+  border-radius: 5px;
+  border: solid 1px #bbc8de;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #343333;
+  padding: 15px;
+  width: 100%;
+}
+.contact-content .contact-content-right .contact-form textarea.message {
+  min-height: 167px;
+}
+.contact-content .contact-content-right .contact-form .form-submit-btn {
+  width: 170px;
+  height: 42px;
+  border-radius: 3px;
+  background-color: #0091ea;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  padding: 0;
+}
+
+/* show the placeholder when input has no content (no content = invalid) */
+input[required]:invalid + label,
+textarea[required]:invalid + label {
+  display: absolute;
+}
+
+/* hide the placeholder when input has some text typed in */
+input[required]:valid + label,
+textarea[required]:valid + label {
+  display: none;
+}
+
+/*# sourceMappingURL=contact.css.map */

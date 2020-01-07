@@ -1,0 +1,72 @@
+.about-container .introduction {
+  padding-top: 27px;
+  padding-bottom: 109px;
+}
+.about-container .about-item {
+  padding-bottom: 90px;
+  padding-top: 20px;
+}
+.about-container .about-item .about-header {
+  margin-bottom: 30px;
+}
+.about-container .about-item .about-header h2 {
+  padding-bottom: 13px;
+  display: inline;
+  padding-right: 10px;
+  color: #4d658b;
+  font-weight: bold;
+  font-size: 30px;
+}
+.about-container .about-item .about-header .about-border {
+  height: 3px;
+  width: 100%;
+  margin-top: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  flex: 1;
+}
+.about-container .about-item .about-header .about-border > div {
+  height: 100%;
+  width: 100%;
+}
+.about-container .about-item .about-header .about-border .special-border {
+  background-color: #ef6f3c;
+  margin-right: 20px;
+  flex: 3;
+}
+.about-container .about-item .about-header .about-border .normal-border {
+  background-color: #a7a7a7;
+  flex: 11;
+  opacity: 0.3;
+}
+.about-container .about-item .about-item-text {
+  font-size: 14px;
+}
+.about-container .about-item .left-description {
+  margin-right: 30px;
+}
+.about-container .about-item .right-description {
+  margin-left: 30px;
+}
+.about-container .about-item .right-img .image-container {
+  margin-left: 30px;
+}
+.about-container .about-item .left-img .image-container {
+  margin-right: 30px;
+}
+.about-container .slogan {
+  margin-top: -8px;
+  height: 240px;
+  margin-bottom: 31px;
+}
+
+.about-map {
+  margin-top: -12px;
+  margin-bottom: 58px;
+  height: 572px;
+  width: 100%;
+}
+
+/*# sourceMappingURL=about.css.map */

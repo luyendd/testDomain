@@ -1,0 +1,72 @@
+.edu-type {
+  margin-bottom: 30px;
+}
+.edu-type .edu-type-item {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(to bottom, #24a0edab, #4d658baf), url("../images/edu-cnter.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 100% 100%;
+  border-radius: 5px;
+  height: 137px;
+}
+.edu-type .edu-type-item h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.edu-type .edu-type-item .price {
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.quick-filter {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 40px;
+}
+.quick-filter .quick-filter-bar {
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  border: solid 1px #bbc8de;
+  background-color: #ffffff;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.quick-filter .quick-filter-bar .sort-btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex: 3;
+  font-size: 14px;
+  font-weight: 500;
+  border-right: solid 1px #758cb1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quick-filter .quick-filter-bar .sort-btn .sort-icon {
+  margin-right: 10px;
+}
+.quick-filter .quick-filter-bar .sort-list {
+  flex: 21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quick-filter .quick-filter-bar .sort-list > div {
+  font-weight: 600;
+  color: #4d658b;
+  font-size: 14px;
+  flex: 1;
+  text-align: center;
+}
+
+/*# sourceMappingURL=courses.css.map */
