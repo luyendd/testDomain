@@ -1,0 +1,146 @@
+.banner-home,
+.banner-sub {
+  width: 100%;
+  height: 373px;
+  background-color: #0091ea;
+
+  .banner-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 33px;
+
+    .button-filter {
+      margin-top: 34px;
+      width: 114px;
+      height: 38px;
+      border-radius: 3px;
+      backdrop-filter: blur(30px);
+      border: solid 1px #ffffff;
+      background-color: #6bb7f8;
+      color: #fff;
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .filter-icon {
+        margin-right: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .banner-content-home {
+    display: flex;
+    flex-direction: column;
+    padding-left: 197px;
+
+    h4:first-child {
+      color: #fff;
+      margin-bottom: 46px;
+    }
+
+    .banner-search {
+      display: flex;
+      padding-bottom: 30px;
+      align-items: center;
+
+      > div {
+        height: 43px;
+        margin-right: 20px;
+      }
+
+      .bs-border {
+        border: solid 1px #1f7cb5;
+        border-radius: 2px;
+      }
+
+      .bs-text {
+        width: 428px;
+        font-size: 14px;
+
+        .text-search {
+          width: 100%;
+          height: 100%;
+          padding-left: 10px;
+          font-size: 14px;
+        }
+      }
+
+      .bs-select {
+        width: 173px;
+
+        .banner-btn-dropdown {
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          font-size: 14px;
+          position: relative;
+
+          .dropdown-text {
+            padding-right: 40px;
+          }
+
+          .dropdown-icon {
+			font-size: 16px !important;
+			position: absolute;
+			left: 7px;
+			top: 12px;
+            color: rgb(107, 98, 98);
+          }
+
+          &:after {
+            opacity: 0.5;
+            margin-right: -40px;
+          }
+        }
+
+        .dropdown-menu {
+          font-size: 14px;
+          width: inherit;
+        }
+      }
+
+      .bs-search {
+        width: 109px;
+
+        .search-btn {
+          height: 100%;
+          width: 100%;
+          background-color: #1d5477;
+          color: #fff;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .banner-tag {
+      color: #fff;
+
+      .bt-list {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        padding-left: 0;
+
+        > li {
+          padding-right: 30px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.banner-sub {
+  height: 250px;
+  background-color: #0091ea;
+  margin-bottom: 40px;
+
+  .banner-route {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 11px;
+    margin-left: 301px;
+  }
+}
