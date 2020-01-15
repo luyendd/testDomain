@@ -1,0 +1,41 @@
+@import "global/styles.scss";
+
+.edu-center {
+  padding-bottom: 26px;
+
+  .edu-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 5px 15px 39px 15px;
+    width: 100%;
+
+    h3 {
+      color: $font-color-primary;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    .view-all-link {
+      color: $color-active;
+      .icon-view-all {
+        color: $color-active;
+        font-size: 20px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .course-list {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    .image-container {
+      border-radius: 5px;
+      margin-bottom: 30px;
+      height: 344px;
+      width: 100%;
+    }
+  }
+}

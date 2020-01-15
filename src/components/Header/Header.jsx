@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './Header.scss';
 
 class Header extends React.Component {
@@ -23,22 +23,22 @@ class Header extends React.Component {
 
 					<div className="col-11 collapse navbar-collapse" id="navbarTogglerDemo02">
 						<ul className="navbar-nav mr-auto mt-2 mt-lg-0 nav-list-item">
-							<li className="nav-item active">
+							<li className={`nav-item ${this.props.location.pathname === '/' ? 'active' : ' '}`}>
 								<Link className="nav-link" to="/">Trang chủ</Link>
 							</li>
-							<li className="nav-item">
+							<li className={`nav-item ${this.props.location.pathname === '/about' ? 'active' : ' '}`}>
 								<Link className="nav-link" to="/about">Giới thiệu</Link>
 							</li>
-							<li className="nav-item">
+							<li className={`nav-item ${this.props.location.pathname === '/courses' ? 'active' : ' '}`}>
 								<Link className="nav-link" to="/courses">Khóa học</Link>
 							</li>
-							<li className="nav-item">
+							<li className={`nav-item ${this.props.location.pathname === '/stakeholders' ? 'active' : ' '}`}>
 								<Link className="nav-link" to="/stakeholders">Đối tác</Link>
 							</li>
-							<li className="nav-item">
+							<li className={`nav-item ${this.props.location.pathname === '/news' ? 'active' : ' '}`}>
 								<Link className="nav-link" to="/news">Tin tức</Link>
 							</li>
-							<li className="nav-item">
+							<li className={`nav-item ${this.props.location.pathname === '/contact' ? 'active' : ' '}`}>
 								<Link className="nav-link" to="/contact">Liên hệ</Link>
 							</li>
 						</ul>
@@ -54,4 +54,4 @@ class Header extends React.Component {
 	}
 }
 
-export default Header;
+export default withRouter(Header);

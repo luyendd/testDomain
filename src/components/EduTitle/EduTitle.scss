@@ -1,0 +1,51 @@
+.title-container {
+	margin-top: 54px;
+	margin-bottom: 45px;
+  
+	.title-img {
+	  width: 54px;
+	  height: 54px;
+	  background-color: #24a1ed;
+	  box-shadow: 0 3px 6px 0 #2b96f0;
+	  border-radius: 30px;
+	  margin-bottom: 16px;
+	  margin-right: auto;
+	  margin-left: auto;
+	}
+  
+	h2.background {
+	  position: relative;
+	  z-index: 1;
+	  width: 100%;
+	  text-align: center;
+	  margin-bottom: 0;
+  
+	  &::before {
+		border-top: 2px solid #dfdfdf;
+		content: "";
+		margin: 0 auto;
+		/* this centers the line to the full width specified */
+		position: absolute;
+		/* positioning must be absolute here, and relative positioning must be applied to the parent */
+		top: 72%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: -1;
+	  }
+  
+	  span {
+		/* to hide the lines from behind the text, you have to set the background color the same as the container */
+		background: #fff;
+		padding: 0 60px;
+		color: #4d658b;
+		line-height: 1.25;
+		font-size: 20px;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		letter-spacing: normal;
+	  }
+	}
+  }

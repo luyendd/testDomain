@@ -1,0 +1,96 @@
+@import "global/styles.scss";
+
+.about-container {
+  .introduction {
+    margin-top: 70px;
+    padding-bottom: 109px;
+  }
+  .about-item {
+    padding-bottom: 90px;
+    padding-top: 20px;
+
+    .about-header {
+      margin-bottom: 30px;
+
+      h2 {
+        padding-bottom: 13px;
+        display: inline;
+        padding-right: 10px;
+        color: $font-color-primary;
+        font-weight: bold;
+        font-size: 30px;
+      }
+
+      .about-border {
+        height: 3px;
+        width: 100%;
+        margin-top: 9px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #fff;
+        flex: 1;
+
+        > div {
+          height: 100%;
+          width: 100%;
+        }
+
+        .special-border {
+          background-color: #ef6f3c;
+          margin-right: 20px;
+          flex: 3;
+        }
+
+        .normal-border {
+          background-color: #a7a7a7;
+          flex: 11;
+          opacity: 0.3;
+        }
+      }
+    }
+
+    .about-item-text {
+      font-size: 14px;
+    }
+
+    .left-description {
+      margin-right: 30px;
+    }
+
+    .right-description {
+      margin-left: 30px;
+    }
+
+    .right-img {
+      .image-container {
+        margin-left: 30px;
+      }
+      .about-video {
+		height: 100%;
+		>div {
+			height: 100%;
+		}
+      }
+    }
+
+    .left-img {
+      .image-container {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .slogan {
+    margin-top: -8px;
+    height: 240px;
+    margin-bottom: 31px;
+  }
+}
+
+.about-map {
+  margin-top: -12px;
+  margin-bottom: 58px;
+  height: 572px;
+  width: 100%;
+}

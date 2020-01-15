@@ -1,0 +1,39 @@
+@import "global/styles.scss";
+
+.most-selected-course {
+  padding-bottom: 70px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex-direction: column;
+
+  .edu-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $font-color-primary;
+
+    h3 {
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .bt-list {
+      list-style: none;
+      display: flex;
+      padding-left: 0;
+      margin-bottom: 40px;
+
+      > li {
+        font-size: 16px;
+		margin-right: 62px;
+		
+		&:hover {
+			cursor: pointer;
+		}
+      }
+      .active {
+        color: $color-active;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaSlidersH, FaMapMarkerAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './Banner.scss';
 
 class Banner extends React.Component {
@@ -17,10 +18,13 @@ class Banner extends React.Component {
 						<button type="button" className="btn button-filter">
 							<FaSlidersH className="filter-icon" />
 							Bộ lọc
-                    </button>
+                    	</button>
 					</div>
 					<div className="banner-content-home">
-						<h4>Nền tảng kết nối trực tiếp từ giảng viên tới Học Viên</h4>
+						{this.props.route === 'Home' && (
+							<h4>Nền tảng kết nối trực tiếp từ giảng viên tới Học Viên</h4>
+						)}
+
 						<div className="banner-search">
 							<div className="bs-text">
 								<input type="text" className="bs-border text-search"
@@ -33,9 +37,9 @@ class Banner extends React.Component {
 									<span className="dropdown-text">Địa Điểm</span>
 								</button>
 								<div className="dropdown-menu">
-									<a className="dropdown-item" href="#">Hoàn Kiếm</a>
-									<a className="dropdown-item" href="#">Hai Bà Trưng</a>
-									<a className="dropdown-item" href="#">Đống Đa</a>
+									<Link className="dropdown-item" to="/" >Hoàn Kiếm</Link>
+									<Link className="dropdown-item" to="/" >Đống Đa</Link>
+									<Link className="dropdown-item" to="/" >Hai Bà Trưng</Link>
 								</div>
 							</div>
 							<div className="bs-search">
@@ -53,7 +57,7 @@ class Banner extends React.Component {
 								</ul>
 							</div>
 						) : (
-								<div class="banner-route">
+								<div className="banner-route">
 									Trang chủ / Giới thiệu
                     			</div>
 							)

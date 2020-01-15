@@ -7,6 +7,9 @@ import {
 import Home from 'screens/Home/Home';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
+import Contact from 'screens/Contact/Contact';
+import About from 'screens/About/About';
+import Courses from 'screens/Courses/Courses';
 import './Main.scss';
 
 class Main extends React.Component {
@@ -20,18 +23,23 @@ class Main extends React.Component {
 		return (
 			<Router>
 				<div className="container-fluid">
-				<Header />
+					<Header />
 					<Switch>
-						{/* <Route path="/about">
-							<About />
-						</Route> */}
-						<Route path="/">
+						<Route exact path="/">
 							<Home />
+						</Route>
+						<Route path="/about">
+							<About />
+						</Route>
+						<Route path="/courses">
+							<Courses />
+						</Route>
+						<Route path="/contact">
+							<Contact />
 						</Route>
 					</Switch>
 
 					<Footer />
-
 				</div>
 			</Router>
 		);

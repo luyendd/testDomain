@@ -1,0 +1,30 @@
+.teaching-type {
+	margin-top: 43px;
+  
+	.teaching-type-item {
+	  padding-bottom: 15px;
+  
+	  .teaching-type-image {
+		height: 137px;
+		border-radius: 5px;
+	  }
+  
+	  .teaching-type-header {
+		padding-top: 15px;
+		font-weight: bold;
+		text-align: center;
+		font-size: 16px;
+	  }
+  
+	  .teaching-type-text {
+		padding-top: 8px;
+		text-align: center;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 65%;
+		color: #807c7c;
+		font-size: 14px;
+	  }
+	}
+  }

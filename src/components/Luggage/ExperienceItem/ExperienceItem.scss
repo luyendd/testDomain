@@ -1,0 +1,22 @@
+.st-ex-item {
+  position: relative;
+
+  .sp-ex-description {
+    position: absolute;
+    background-color: rgba(51, 51, 51, 0.56);
+    color: #fff;
+    margin-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    font-size: 14px;
+
+    &.st-ex-item-description {
+      bottom: 23px;
+      text-transform: uppercase;
+      margin-left: 15px;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+}

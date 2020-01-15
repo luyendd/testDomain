@@ -1,0 +1,26 @@
+.luggage-container {
+  margin-top: 10px;
+  padding-bottom: 25px;
+  
+  .title-container {
+    margin-bottom: 0px;
+  }
+
+  .luggage-header {
+    color: #4d658b;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .special-experience {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+  }
+
+  .study-experience {
+    display: flex;
+    margin-bottom: -15px;
+  }
+}
