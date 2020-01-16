@@ -1,9 +1,9 @@
 import React from 'react';
-import { FiChevronsRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { FiChevronsRight } from 'react-icons/fi';
 import ImageComp from 'components/ImageComp/ImageComp';
 import CourseItem from 'components/CourseItem/CourseItem';
-import './EduCenters.scss';
+import './EduCoach.scss';
 
 const courses = [
 	{
@@ -92,7 +92,7 @@ const courses = [
 	},
 ];
 
-class EduCenters extends React.Component {
+class EduCoach extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -102,9 +102,9 @@ class EduCenters extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<div className="row edu-center">
+				<div className="row edu-teacher">
 					<div className="edu-title">
-						<h3>Edutalk Teacher - Kết nối trung tâm uy tín</h3>
+						<h3>Edutalk Teacher - Kết nối gia sư uy tín</h3>
 						<Link className="view-all-link" to="/">
 							Xem tất cả
 						<FiChevronsRight className="icon-view-all" />
@@ -113,14 +113,14 @@ class EduCenters extends React.Component {
 					<div className="row course-list">
 						{this.props.image != null && (
 							<div className="col-6">
-								<ImageComp styleName={'rounded'} src={this.props.image} alt={'Edutalk Center'} />
+								<ImageComp styleName={'rounded'} src={this.props.image} alt={'Edutalk Teacher'} />
 							</div>
 						)}
 
 						{courses.map((item, index) => {
 							return (
 								<CourseItem data={item} key={index} />
-							);
+							)
 						})}
 
 					</div>
@@ -130,4 +130,4 @@ class EduCenters extends React.Component {
 	}
 }
 
-export default EduCenters;
+export default EduCoach;

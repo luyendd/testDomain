@@ -5,7 +5,7 @@ import './TeachingType.scss';
 const teachTypes = [
 	{
 		img: {
-			src: './assets//images/edu-cnter.png',
+			src: './assets/images/edu-cnter.png',
 			alt: 'Edutalk Center',
 		},
 		title: 'Edutalk Center',
@@ -13,7 +13,7 @@ const teachTypes = [
 	},
 	{
 		img: {
-			src: './assets//images/edu-cnter.png',
+			src: './assets/images/edu-cnter.png',
 			alt: 'Edutalk Teachers',
 		},
 		title: 'Edutalk Teachers',
@@ -21,7 +21,7 @@ const teachTypes = [
 	},
 	{
 		img: {
-			src: './assets//images/edu-cnter.png',
+			src: './assets/images/edu-cnter.png',
 			alt: 'Edutalk Coach',
 		},
 		title: 'Edutalk Coach',

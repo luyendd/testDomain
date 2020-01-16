@@ -2,8 +2,7 @@ import React from 'react';
 import Banner from 'components/Banner/Banner';
 import TeachingType from 'components/TeachingType/TeachingType';
 import Introduction from 'components/Introduction/Introduction';
-import EduTeachers from 'components/EduTeachers/EduTeachers';
-import EduCenters from 'components/EduCenters/EduCenters';
+import EduHome from 'components/EduHome/EduHome';
 import MostSelectedCourses from 'components/MostSelectedCourses/MostSelectedCourses';
 import TestHome from 'components/TestHome/TestHome';
 import Luggage from 'components/Luggage/Luggage';
@@ -24,8 +23,7 @@ class Home extends React.Component {
 				<Banner route={'Home'} />
 				<TeachingType />
 				<Introduction route={'Home'}/>
-				<EduTeachers />
-				<EduCenters />
+				<EduHome />
 				<MostSelectedCourses />
 				<TestHome />
 				<Luggage />

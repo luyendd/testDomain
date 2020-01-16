@@ -10,6 +10,7 @@ import Header from 'components/Header/Header';
 import Contact from 'screens/Contact/Contact';
 import About from 'screens/About/About';
 import Courses from 'screens/Courses/Courses';
+import CourseDetail from 'screens/CourseDetail/CourseDetail';
 import './Main.scss';
 
 class Main extends React.Component {
@@ -36,6 +37,9 @@ class Main extends React.Component {
 						</Route>
 						<Route path="/contact">
 							<Contact />
+						</Route>
+						<Route path="/course/:courseId">
+							<CourseDetail />
 						</Route>
 					</Switch>
 

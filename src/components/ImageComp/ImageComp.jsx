@@ -16,7 +16,7 @@ class ImageComp extends React.Component {
 	render() {
 		return (
 			<div className={`image-container ${this.props.styleName ? this.props.styleName : ''}`}>
-				<img src={this.props.src} alt={this.props.alt} {...this.props.rounded === true && {className: 'rounded'}}/>
+				<img src={`${process.env.PUBLIC_URL}/${this.props.src}`} alt={this.props.alt} {...this.props.rounded === true && {className: 'rounded'}}/>
 			</div>
 		)
 	}

@@ -8,6 +8,7 @@ import './EduTeachers.scss';
 
 const courses = [
 	{
+		id: 1,
 		teacherImg: './assets/images/teacher.png',
 		teacherName: 'Trần Văn A',
 		courseImg: './assets/images/edu-item.png',
@@ -21,6 +22,7 @@ const courses = [
 		description: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of…',
 	},
 	{
+		id: 2,
 		teacherImg: './assets/images/teacher.png',
 		teacherName: 'Trần Văn A',
 		courseImg: './assets/images/edu-item.png',
@@ -34,6 +36,7 @@ const courses = [
 		description: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of…',
 	},
 	{
+		id: 3,
 		teacherImg: './assets/images/teacher.png',
 		teacherName: 'Trần Văn A',
 		courseImg: './assets/images/edu-item.png',
@@ -47,6 +50,7 @@ const courses = [
 		description: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of…',
 	},
 	{
+		id: 4,
 		teacherImg: './assets/images/teacher.png',
 		teacherName: 'Trần Văn A',
 		courseImg: './assets/images/edu-item.png',
@@ -60,6 +64,7 @@ const courses = [
 		description: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of…',
 	},
 	{
+		id: 5,
 		teacherImg: './assets/images/teacher.png',
 		teacherName: 'Trần Văn A',
 		courseImg: './assets/images/edu-item.png',
@@ -73,6 +78,7 @@ const courses = [
 		description: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of…',
 	},
 	{
+		id: 6,
 		teacherImg: './assets/images/teacher.png',
 		teacherName: 'Trần Văn A',
 		courseImg: './assets/images/edu-item.png',
@@ -97,7 +103,7 @@ class EduTeachers extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<EduTitle title={'Chúng ta hãy học cùng nhau'} />
+				{this.props.route === 'Home' && <EduTitle title={'Chúng ta hãy học cùng nhau'} />}
 				<div className="row edu-teacher">
 					<div className="edu-title">
 						<h3>Edutalk Teacher - Kết nối giảng viên uy tín</h3>
@@ -107,13 +113,15 @@ class EduTeachers extends React.Component {
 						</Link>
 					</div>
 					<div className="row course-list">
-						<div className="col-6">
-							<ImageComp styleName={'rounded'} src={'./assets/images/edu-banner.png'} alt={'Edutalk Teacher'} />
-						</div>
+						{this.props.image != null && (
+							<div className="col-6">
+								<ImageComp styleName={'rounded'} src={this.props.image} alt={'Edutalk Teacher'} />
+							</div>
+						)}
 
 						{courses.map((item, index) => {
 							return (
-								<CourseItem {...item} key={index} />
+								<CourseItem data={item} key={index} />
 							)
 						})}
 

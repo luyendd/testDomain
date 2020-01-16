@@ -14,7 +14,7 @@ class Header extends React.Component {
 			<nav className="container-fluid navbar sticky-top navbar-expand-lg navbar-light">
 				<div className="container">
 					<Link className="col-1 navbar-brand" to="/">
-						<img src="./assets//images/logo/Logo-edutalk.png" className="logo-home" alt="" />
+						<img src={`${process.env.PUBLIC_URL}/assets//images/logo/Logo-edutalk.png`} className="logo-home" alt="" />
 					</Link>
 					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
 						aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">

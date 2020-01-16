@@ -11,6 +11,10 @@
   box-shadow: 0 3px 50px 0 rgba(77, 101, 139, 0.17);
   border-radius: 5px;
 
+  &:hover {
+	  cursor: pointer;
+  }
+
   &:hover .course-item-hover {
     z-index: 3;
     height: 90%;
@@ -79,15 +83,13 @@
       justify-content: space-evenly;
 
       .course-item-detail-title {
-        flex: 0.23;
+		height: 48px;
         color: $font-color-primary;
         font-weight: 600;
         font-size: 16px;
       }
 
       .course-item-detail-price {
-        flex: 0.115;
-
         span {
           color: #a7a2a2;
           font-size: 10px;
@@ -104,7 +106,6 @@
       }
 
       .course-item-detail-vote {
-        flex: 0.0081;
         color: $color-yellow;
 
         span {
@@ -113,8 +114,6 @@
       }
 
       .course-item-detail-location {
-        flex: 0.0081;
-
         .map-icon {
           font-size: 16px;
           width: 27px;
@@ -129,7 +128,6 @@
       }
 
       .course-item-detail-bottom {
-        flex: 0.0081;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

@@ -1,0 +1,134 @@
+.register {
+  position: relative;
+  .sticky-top {
+    top: 65px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    border-radius: 5px;
+
+    .register-img {
+      background: linear-gradient(to bottom, #24a0edab, #4d658baf);
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-size: 100% 100%;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      width: 100%;
+      height: 200px;
+      margin-bottom: 15px;
+
+      .image-container {
+        height: 100%;
+        > img {
+          z-index: -1;
+        }
+      }
+    }
+
+    .register-form {
+      padding-left: 25px;
+      padding-right: 25px;
+      color: #343333;
+
+      .register-form-header-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 4px;
+
+        .ed-ct-dt-price span:first-child {
+          font-weight: bold;
+          font-size: 20px;
+          margin-right: 10px;
+          color: #fd3636;
+          text-decoration: none;
+        }
+
+        .ed-ct-dt-price span {
+          font-size: 12px;
+          color: #a7a2a2;
+          text-decoration: line-through;
+        }
+
+        .big-icon {
+          font-size: 23px;
+        }
+
+        &.slot {
+          font-size: 12px;
+          margin-bottom: 12px;
+          color: #343333;
+        }
+
+        > button {
+          flex: 1;
+          border-radius: 5px;
+          border: 0;
+          color: #fff;
+          height: 40px;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        .register-trial-study-btn {
+          background-color: #3eb0f7;
+          margin-right: 20px;
+        }
+
+        .register-study-btn {
+          background-color: #fd6060;
+        }
+      }
+
+      .register-form-body {
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #bbc8de;
+
+        .register-form-body-item {
+          flex: 1;
+          margin-bottom: 15px;
+          display: flex;
+          align-items: center;
+
+          .icon {
+            width: 16px;
+            color: #4d658b;
+            font-size: 15px !important;
+		  }
+		  
+		  .custom-icon {
+			  font-size: 16px;
+			  width: 16px;
+		  }
+
+          span {
+            font-size: 14px;
+            margin-left: 15px;
+          }
+        }
+      }
+
+      .register-form-footer {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        .hotline {
+          font-size: 23px;
+          color: #919191;
+
+          span {
+            font-weight: bold;
+            color: #fd3636;
+          }
+        }
+      }
+    }
+  }
+}

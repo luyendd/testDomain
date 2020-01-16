@@ -14,7 +14,17 @@
     background-position: bottom left;
     background-size: 100% 100%;
     border-radius: 5px;
-    height: 137px;
+	height: 137px;
+	position: relative;
+	
+	.background-img {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		z-index: -1;
+	}
 
     h5 {
       font-weight: bold;
