@@ -1,13 +1,6 @@
 .register {
   position: relative;
   .sticky-top {
-    top: 65px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
-    border-radius: 5px;
-
     .register-img {
       background: linear-gradient(to bottom, #24a0edab, #4d658baf);
       background-repeat: no-repeat;

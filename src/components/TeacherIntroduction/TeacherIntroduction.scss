@@ -1,0 +1,137 @@
+.teacher-information {
+    margin-bottom: 30px;
+
+    .teacher-information-content {
+        padding: 7px 30px 21px 30px;
+        width: 100%;
+
+        .header {
+            flex-direction: row;
+            justify-content: space-between;
+            display: flex;
+            align-items: baseline;
+
+            .course-title {
+                padding-bottom: 20px;
+            }
+
+            .detail-btn {
+                border-radius: 5px;
+                background-color: #fd6060;
+                border: 0;
+                width: 186px;
+                color: #fff;
+                font-size: 14px;
+                height: 35px;
+            }
+        }
+
+        .introduction {
+            flex-direction: row;
+            padding-bottom: 30px;
+            display: flex;
+
+            .teacher-avatar {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+                width: 84px;
+                height: 84px;
+                margin-right: 20px;
+            }
+
+            .detail {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+
+                .intro-title {
+                    font-size: 12px;
+                    color: #343333;
+                    margin-top: 3px;
+                }
+
+                .course-item-detail-vote {
+                    font-size: 18px;
+                }
+
+                .intro-content {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #343333;
+                    margin-top: 7px;
+                    padding-left: 0;
+                    margin-bottom: 2px;
+                }
+            }
+
+            .location {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+
+                .intro-content {
+                    padding-left: 0;
+                    font-weight: bold;
+                    margin-top: 7px;
+                }
+
+                .intro-title {
+                    font-size: 12px;
+                    margin-top: 3px;
+                }
+            }
+
+            .total {
+                flex: 3;
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 8px;
+
+                .total-number {
+                    font-weight: bold;
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+
+                >div {
+                    width: 186px;
+                    height: 61px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 5px;
+                    background-color: #7bcdff;
+                    color: #fff;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .story {
+            display: flex;
+            flex-direction: column;
+
+            .tc-info-story {
+                color: #fc4d6f;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .more-btn {
+        border-radius: 5px;
+        background-color: #24a1ed;
+        color: #fff;
+        font-size: 14px;
+        padding: 8px 30px;
+        border: 0;
+        display: inherit;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 30px;
+    }
+}

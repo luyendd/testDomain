@@ -69,10 +69,12 @@ class CourseDetail extends React.Component {
 								</div>
 							</div>
 
-							<TeacherIntroduction />
+							<TeacherIntroduction type={'course'} />
 						</div>
 						<div className="col-4 register">
-							<RegisterCourseDetail />
+							<div className="sticky-top form-border">
+								<RegisterCourseDetail />
+							</div>
 						</div>
 					</div>
 

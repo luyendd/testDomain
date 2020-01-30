@@ -28,7 +28,7 @@ class RegisterCourseDetail extends React.Component {
 
 	render() {
 		return (
-			<div className="sticky-top form-border">
+			<>
 				<div className="register-img">
 					<ImageComp src={'assets/images/register-form.png'} />
 				</div>
@@ -71,7 +71,7 @@ class RegisterCourseDetail extends React.Component {
 						<div className="hotline">Hotline: <span>19004788</span></div>
 					</div>
 				</div>
-			</div>
+			</>
 		)
 	}
 }
