@@ -1,9 +1,11 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaRegClock } from 'react-icons/fa';
 import { MdPhone } from 'react-icons/md';
+import { connect } from 'react-redux';
 import Banner from 'components/Banner/Banner';
 import Map from 'components/Map/Map';
 import { isInValidEmail, isEmpty } from 'ultis/commom';
+import { sendMessage } from './redux';
 import './Contact.scss';
 
 class Contact extends React.Component {
@@ -95,6 +97,16 @@ class Contact extends React.Component {
 
 		if (this.state.nameError == null && this.state.phoneError == null && this.state.emailError == null && this.state.messageError == null) {
 			//submit form here
+			const params = {
+				url: 'v3/contact/send',
+				data: {
+					name: this.state.name,
+					phone: this.state.phoneNumber,
+					email: this.state.email,
+					message: this.state.message,
+				},
+			};
+			this.props.sendMessage(params);
 		}
 	}
 
@@ -102,7 +114,7 @@ class Contact extends React.Component {
 		return (
 			<div>
 				<Banner />
-				<div className="contact-map"><Map /></div>
+				<div className="contact-map"><Map location={{ lng: 1 }} /></div>
 				<div className="container">
 					<div className="row contact-content">
 						<div className="col-6">
@@ -177,4 +189,13 @@ class Contact extends React.Component {
 	}
 }
 
-export default Contact;
+const mapDispatchToProps = dispatch => ({
+	sendMessage: payload => dispatch(sendMessage(payload))
+});
+
+export default (
+	connect(
+		null,
+		mapDispatchToProps,
+	)(Contact)
+);

@@ -1,13 +1,22 @@
 import React from 'react';
 import { FaSlidersH, FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import AdvancedFilter from 'components/AdvancedFilter/AdvancedFilter';
 import './Banner.scss';
 
 class Banner extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {};
+		this.state = {
+			toggleFilter: this.props.toggle ? this.props.toggle : false,
+		};
+	}
+
+	toggleFunc = () => {
+		this.setState({
+			toggleFilter: !this.state.toggleFilter,
+		});
 	}
 
 	render() {
@@ -15,7 +24,7 @@ class Banner extends React.Component {
 			<div className={this.props.route === 'Home' ? "banner-home" : "banner-sub"}>
 				<div className="container">
 					<div className="banner-btn">
-						<button type="button" className="btn button-filter">
+						<button type="button" className="btn button-filter" onClick={this.toggleFunc}>
 							<FaSlidersH className="filter-icon" />
 							Bộ lọc
                     	</button>
@@ -64,6 +73,7 @@ class Banner extends React.Component {
 						}
 					</div>
 				</div>
+				<AdvancedFilter toggle={this.state.toggleFilter} toggleFunc={this.toggleFunc} />
 			</div>
 		)
 	}

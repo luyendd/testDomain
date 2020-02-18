@@ -1,0 +1,48 @@
+.best-course {
+    flex-direction: column;
+}
+
+.slider {
+    width: 100%;
+
+    .slide-btn {
+        position: absolute;
+        top: calc(50% - 44px);
+        width: 44px;
+        height: 44px;
+        z-index: 10;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .arrow-icon {
+            color: #000;
+            border-radius: 47px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.16);
+            background-color: #ffffff;
+            height: 100%;
+            width: 100%;
+            padding: 12px;
+        }
+
+        &.previous-btn {
+            .arrow-icon {
+                padding-right: 15px;
+            }
+
+            left: 0px;
+        }
+
+        &.next-btn {
+            .arrow-icon {
+                padding-left: 15px;
+            }
+
+            right: 0px;
+        }
+    }
+}

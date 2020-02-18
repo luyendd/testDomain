@@ -3,8 +3,12 @@
 
   .image-container {
     width: 100%;
-	height: auto;
-	margin-bottom: 0;
+    height: 100%;
+    margin-bottom: 0;
+
+    img {
+      height: 100%;
+    }
   }
 
   .sp-ex-description {
@@ -15,11 +19,13 @@
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 14px;
+    height: 70px;
+    text-align: center;
 
     &.sp-ex-item-description {
       bottom: 0;
 
-      > span {
+      >span {
         padding-left: 15px;
         padding-right: 15px;
         display: block;

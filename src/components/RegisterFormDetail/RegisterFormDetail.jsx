@@ -16,19 +16,19 @@ class RegisterFormDetail extends React.Component {
                 <div className="register-form-body">
                     <div className="register-form-body-item">
                         <input type="text" value="Số điện thoại" disabled />
-                        <input type="text" className="value" value="0326 483 884" />
+                        <input type="text" className="value" defaultValue="0326 483 884" />
                     </div>
                     <div className="register-form-body-item">
                         <input type="text" value="Tên giảng viên" disabled />
-                        <input type="text" className="value" value="Nguyễn Thị Kim Tuyến" />
+                        <input type="text" className="value" defaultValue="Nguyễn Thị Kim Tuyến" />
                     </div>
                     <div className="register-form-body-item">
                         <input type="text" value="Khoá học" disabled />
-                        <input type="text" className="value" value="Chọn khoá học và lớp học" />
+                        <input type="text" className="value" defaultValue="Chọn khoá học và lớp học" />
                     </div>
                     <div className="register-form-body-item">
                         <input type="text" value="Thời gian học" disabled />
-                        <input type="text" className="value" value="03/11/2019 - 19h30" />
+                        <input type="text" className="value" defaultValue="03/11/2019 - 19h30" />
                     </div>
                     <div className="register-form-header-item">
                         <button className="chat-btn">Trò chuyện</button>

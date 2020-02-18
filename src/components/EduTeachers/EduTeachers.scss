@@ -21,6 +21,7 @@
       color: $color-active;
       display: flex;
       align-items: center;
+
       .icon-view-all {
         color: $color-active;
         font-size: 20px;
@@ -32,5 +33,12 @@
   .course-list {
     padding-right: 15px;
     padding-left: 15px;
+
+    .image-container {
+      border-radius: 5px;
+      margin-bottom: 30px;
+      height: 344px;
+      width: 100%;
+    }
   }
 }

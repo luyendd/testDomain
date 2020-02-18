@@ -1,0 +1,76 @@
+@import 'global/styles.scss';
+
+.account-info {
+    border-radius: 5px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+    border: solid 1px #ededed;
+    margin-bottom: 30px;
+
+    >div {
+        margin-bottom: 41px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    .header {
+        margin-top: 22px;
+
+        .header-label {
+            color: #0091ea;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .student-rule {
+            width: 186px;
+            height: 35px;
+            color: #fff;
+            background-color: #fd6060;
+            border: 0;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    }
+
+    .item {
+        .account-input {
+            width: 100%;
+            padding-left: 0;
+            position: relative;
+
+            .label {
+                color: $font-color-primary;
+                position: absolute;
+                top: -12px;
+                left: 9px;
+                z-index: 1;
+                background-color: #fff;
+                padding-right: 25px;
+                padding-left: 11px;
+                font-size: 14px;
+            }
+
+            .input {
+                height: 51px;
+                width: 100%;
+                border-radius: 5px;
+                border: solid 1px #e8e8e8;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 16px;
+            }
+        }
+
+        .input-padding {
+            margin-right: 15px;
+        }
+
+        .no-margin {
+            margin: 0;
+        }
+    }
+}

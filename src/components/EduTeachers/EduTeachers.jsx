@@ -120,6 +120,10 @@ class EduTeachers extends React.Component {
 						)}
 
 						{courses.map((item, index) => {
+							if (index > 5) {
+								return null;
+							}
+
 							return (
 								<CourseItem data={item} key={index} />
 							)

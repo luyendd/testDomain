@@ -2,6 +2,10 @@
   margin-top: 40px;
   margin-bottom: 30px;
 
+  >a {
+    text-decoration: none;
+  }
+
   .edu-type-item {
     display: flex;
     align-items: center;
@@ -14,17 +18,17 @@
     background-position: bottom left;
     background-size: 100% 100%;
     border-radius: 5px;
-	height: 137px;
-	position: relative;
-	
-	.background-img {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		z-index: -1;
-	}
+    height: 137px;
+    position: relative;
+
+    .background-img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+    }
 
     h5 {
       font-weight: bold;
@@ -33,11 +37,10 @@
       font-size: 18px;
     }
 
-	.description {
-		padding-right: 20px;
-		padding-left: 20px;
-	}
-
+    .description {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
 
     .price {
       margin-top: 5px;

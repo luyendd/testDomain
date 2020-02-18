@@ -22,7 +22,7 @@ class Home extends React.Component {
 			<div>
 				<Banner route={'Home'} />
 				<TeachingType />
-				<Introduction route={'Home'}/>
+				<Introduction route={'Home'} />
 				<EduHome />
 				<MostSelectedCourses />
 				<TestHome />

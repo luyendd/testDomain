@@ -11,9 +11,9 @@ class ExperienceItem extends React.Component {
 	render() {
 		return (
 			<div className="col-3 st-ex-item">
-				<img src={this.props.img} className="rounded" height="100%" width="100%"
+				<img src={this.props.data.featured_image.path_string} className="rounded" height="100%" width="100%"
 					alt="" />
-				<div className="sp-ex-description st-ex-item-description"><span>{this.props.content}</span></div>
+				<div className="sp-ex-description st-ex-item-description"><span className="text">{this.props.data.title}</span></div>
 			</div>
 		)
 	}

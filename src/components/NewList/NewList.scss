@@ -1,0 +1,29 @@
+.new-list {
+    margin-bottom: 30px;
+    .sp-ex-item {
+        height: 258px;
+
+        .new-type {
+            position: absolute;
+            color: #fff;
+            bottom: 60px;
+            z-index: 2;
+
+            .new-type-detail {
+                margin-left: 15px;
+                font-size: 12px;
+                width: 105px;
+                height: 25px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .sp-ex-description.sp-ex-item-description {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+    }
+}

@@ -1,22 +1,10 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import { FaStar } from 'react-icons/fa';
 import ImageComp from 'components/ImageComp/ImageComp';
+import { renderStarts } from 'ultis/display';
 import './TeacherIntroduction.scss';
 
-const data = {
-	id: 't1',
-	name: 'Nguyễn Hoàn P',
-	location: 'Lê Thanh Nghị',
-	totalCourse: 14,
-	totalStudent: 30000,
-};
-
 class TeacherIntroduction extends React.Component {
-	static defaultProps = {
-		data,
-	};
-
 	constructor(props) {
 		super(props);
 
@@ -40,7 +28,7 @@ class TeacherIntroduction extends React.Component {
 
 	render() {
 		if (this.state.redirect === true) {
-			return (<Redirect to={`/teacher/${this.props.data.id}`} />);
+			return (<Redirect push to={`/teacher/${this.props.data.slug}`} />);
 		}
 
 		return (
@@ -52,31 +40,27 @@ class TeacherIntroduction extends React.Component {
 					</div>
 					<div className="introduction">
 						<div className="teacher-avatar">
-							<ImageComp src={'assets/images/teacher-avatar.png'} />
+							<ImageComp local={false} src={this.props.data.image.path} />
 						</div>
 						<div className="detail">
 							<span className="intro-title">Giảng viên</span>
 							<span className="intro-content">{this.props.data.name}</span>
 							<div className="course-item-detail-vote">
-								<FaStar />
-								<FaStar />
-								<FaStar />
-								<FaStar />
-								<FaStar />
+								{renderStarts(4)}
 							</div>
 						</div>
 						<div className="location">
-							<span className="intro-title">Địa điểm</span>
-							<span className="intro-content">{this.props.data.location}</span>
+							{this.props.data.address && <><span className="intro-title">Địa điểm</span>
+								<span className="intro-content">{this.props.data.address}</span></>}
 						</div>
 						<div className="total">
 							<div>
 								<div>
-									<div className="total-number">{this.props.data.totalCourse}</div>
+									<div className="total-number">{this.props.data.total_course}</div>
 									<div>Khoá học</div>
 								</div>
 								<div>
-									<div className="total-number">{this.props.data.totalStudent}</div>
+									<div className="total-number">{this.props.data.total_student}</div>
 									<div>Học viên</div>
 								</div>
 							</div>
@@ -85,30 +69,18 @@ class TeacherIntroduction extends React.Component {
 
 					<div className="story">
 						<h6 className="tc-info-story">Tiểu sử</h6>
-						<span>- Cử nhân khoa sư phạm tiếng Anh trường đại học Ngoại Ngữ - Đại Học Quốc Gia Hà Nội
-                            <br />
-							- Tốt nghiệp loại xuất sắc
-                            <br />
-							- Chứng chỉ C1 Level
-                            <br />
-							- Chức danh công việc đã và đang đảm nhận
-                            <br />
-							- Giáo viên công tác tại trường liên cấp Ngôi Sao Hà Nội
-                            <br />
-							- Giảng viên giao tiếp trung tâm tiếng Anh Edutalk
-							{this.props.type === 'teacher' && this.state.viewMore === true && (
+						<span>
+							{this.props.data.level ? this.props.data.level : <div dangerouslySetInnerHTML={{ __html: this.props.data.description }} />}
+							{/* {this.props.type === 'teacher' && this.state.viewMore === true && (
 								<>
-									<br />
-									- Giáo viên công tác tại trường liên cấp Ngôi Sao Hà Nội
-                            		<br />
-									- Giảng viên giao tiếp trung tâm tiếng Anh Edutalk
+									{this.props.data.description}
 								</>
-							)}
+							)} */}
 						</span>
 					</div>
-					{this.props.type === 'teacher' && <button class="more-btn" onClick={this.onClickViewBtn}>
+					{/* {this.props.type === 'teacher' && <button className="more-btn" onClick={this.onClickViewBtn}>
 						{this.state.viewMore === false ? 'Xem thêm' : 'Thu gọn'}
-					</button>}
+					</button>} */}
 				</div>
 			</div>
 		)

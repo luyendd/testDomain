@@ -1,0 +1,18 @@
+.new {
+    .new-container {
+        display: flex;
+        flex-direction: row;
+
+        .left {
+            display: flex;
+            flex: 3;
+            padding-right: 15px;
+        }
+
+        .right {
+            padding-left: 15px;
+            display: flex;
+            flex: 9;
+        }
+    }
+}

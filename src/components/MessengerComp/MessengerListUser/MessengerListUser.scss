@@ -1,0 +1,52 @@
+.messenger-list-user {
+    display: flex;
+    flex-direction: column;
+
+    .user-item {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        padding-right: 17px;
+        padding-left: 17px;
+
+        &.active {
+            background-color: #fff;
+
+            .user-content {
+                .user-name {
+                    color: #333333;
+                }
+
+                .last-message {
+                    color: #7c8083;
+                }
+            }
+        }
+
+        .avatar {
+            height: 39px;
+            border-radius: 30px;
+            flex: 0 0 39px;
+            margin-right: 14px;
+        }
+
+        .user-content {
+            font-size: 12px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+
+            .user-name {
+                font-weight: 600;
+            }
+
+            .last-message {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+            }
+        }
+    }
+}

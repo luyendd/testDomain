@@ -1,6 +1,6 @@
 import React from 'react';
-import './SpecialItem.scss';
 import ImageComp from 'components/ImageComp/ImageComp';
+import './SpecialItem.scss';
 
 class SpecialItem extends React.Component {
 	constructor(props) {
@@ -11,12 +11,18 @@ class SpecialItem extends React.Component {
 
 	render() {
 		return (
-			<div className="col-4 sp-ex-item">
-				<ImageComp src={this.props.img} rounded={true} />
+			<div className={`${this.props.newType != null ? 'col-6' : 'col-4'} sp-ex-item`}>
+				<ImageComp local={false} src={this.props.img} rounded={true} />
+				{this.props.newType != null && (
+					<div className="new-type">
+						<div className="new-type-detail" style={this.props.type === 1 ? { backgroundColor: '#0091ea' } : { backgroundColor: '#4d658b' }}>{this.props.newType}</div>
+					</div>
+				)}
+
 				<div className="sp-ex-description sp-ex-item-description rounded-bottom">
-					<span>{this.props.content}</span>
+					<span>{this.props.data.title}</span>
 				</div>
-			</div>
+			</div >
 		)
 	}
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import { FaMapMarkerAlt, FaStar, FaUsers } from 'react-icons/fa';
-import ImageComp from 'components/ImageComp/ImageComp';
+import { FaMapMarkerAlt, FaUsers } from 'react-icons/fa';
+import { formatNumber } from 'ultis/commom';
+import { renderStarts } from 'ultis/display';
 import './CourseItem.scss';
 
 class CourseItem extends React.Component {
@@ -21,45 +22,45 @@ class CourseItem extends React.Component {
 
 	render() {
 		if (this.state.redirect === true) {
-			return <Redirect to={`/course/${this.props.data.id}`} />
+			return <Redirect push to={`/course/${this.props.data.course.slug}/${this.props.data.id}`} />
+		}
+
+		if (this.props.data == null || this.props.data.image_course == null || this.props.data.teacher == null) {
+			return null;
 		}
 
 		return (
-			<div className="col-3">
+			<div className={`${this.props.className ? this.props.className : 'col-3'}`}>
 				<div className="course-item" onClick={this.goToCourseDetail}>
 					<div className="course-item-content">
 						<div className="course-item-image">
-							<img className="course-image" src={this.props.data.courseImg} alt="" />
+							<img className="course-image" src={this.props.data.image_course.path} alt="" />
 							<div className="course-img-teacher">
 								<div className="teacher-avatar">
-									<img src={this.props.data.teacherImg} alt="" />
+									<img src={this.props.data.image_teacher.path} alt="" />
 								</div>
-								<span className="teacher-name">{this.props.data.teacherName}</span>
+								<span className="teacher-name">{this.props.data.teacher.name}</span>
 							</div>
 						</div>
 						<div className="course-item-detail">
 							<div className="course-item-detail-title">
-								<span>{this.props.data.title}</span>
+								<span>{this.props.data.course.name}</span>
 							</div>
 							<div className="course-item-detail-price">
-								<span className="price">{this.props.data.salePrice}</span>
-								<span>{this.props.data.price}</span>
+								<span className="price">{formatNumber(this.props.data.course.fees * (1 - this.props.data.course.sale / 100))}</span>
+								<span>{formatNumber(this.props.data.course.fees)}</span>
 							</div>
 							<div className="course-item-detail-vote">
-								<FaStar />
-								<FaStar />
-								<FaStar />
-								<FaStar />
-								<FaStar />
+								{renderStarts(this.props.data.avg_rate / 2)}
 							</div>
 							<div className="course-item-detail-location">
 								<FaMapMarkerAlt className="map-icon" />
-								<span className="location">{this.props.data.location}</span>
+								<span className="location">{this.props.data.address}</span>
 							</div>
 							<div className="course-item-detail-bottom">
 								<div className="course-item-detail-empty-slot">
 									<FaUsers className="users-icon" />
-									<span>{this.props.data.emptySlot} / {this.props.data.totalSlot}</span>
+									<span>{this.props.data.current_student} / {this.props.data.total_student}</span>
 								</div>
 								<Link to="/">Đăng ký ngay</Link>
 							</div>
@@ -67,25 +68,27 @@ class CourseItem extends React.Component {
 					</div>
 					<div className="course-item-hover">
 						<div>
-							<p>Khai giảng: {this.props.data.openingDate}</p>
+							<p>Khai giảng: {this.props.data.start_time}</p>
 						</div>
 						<div className="course-item-detail-title">
-							<span>{this.props.data.title}</span>
+							<span>{this.props.data.course.name}</span>
 						</div>
 						<div className="course-item-detail-price">
-							<span className="price">{this.props.data.salePrice}</span>
-							<span>{this.props.data.price}</span>
+							<span className="price">{formatNumber(this.props.data.course.fees * (1 - this.props.data.course.sale / 100))}</span>
+							<span>{formatNumber(this.props.data.course.fees)}</span>
 						</div>
 						<div className="course-item-detail-location">
-							<i className="fa fa-map-marker map-icon" aria-hidden="true"></i>
-							<span className="location">{this.props.data.location}</span>
+							<FaMapMarkerAlt className="map-icon" />
+							<span className="location">{this.props.data.address}</span>
 						</div>
 						<div className="course-item-hover-img">
-							<ImageComp src={'./assets/images/teacher.png'} />
-							<span className="hover-teacher-name">Giảng viên: {this.props.data.teacherName}</span>
+							<div className="teacher-hover-avatar">
+								<img src={this.props.data.image_teacher.path} alt="" />
+							</div>
+							<span className="hover-teacher-name">Giảng viên: {this.props.data.teacher.name}</span>
 						</div>
 						<div>
-							<span className="course-item-hover-description">{this.props.data.description}</span>
+							<span className="course-item-hover-description">{this.props.data.course.excerpt}</span>
 						</div>
 					</div>
 				</div>

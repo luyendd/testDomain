@@ -8,11 +8,11 @@
   justify-content: flex-end;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 3px 50px 0 rgba(77, 101, 139, 0.17);
+  box-shadow: 0 3px 15px 0 rgba(77, 101, 139, 0.17);
   border-radius: 5px;
 
   &:hover {
-	  cursor: pointer;
+    cursor: pointer;
   }
 
   &:hover .course-item-hover {
@@ -48,6 +48,7 @@
 
       .course-image {
         z-index: -1;
+        width: 100%;
       }
 
       .course-img-teacher {
@@ -61,10 +62,15 @@
         .teacher-avatar {
           border-radius: 50%;
           display: flex;
+          justify-content: center;
           align-items: center;
           width: 70px;
           height: 70px;
           overflow: hidden;
+
+          img {
+            width: 100%;
+          }
         }
 
         .teacher-name {
@@ -83,10 +89,20 @@
       justify-content: space-evenly;
 
       .course-item-detail-title {
-		height: 48px;
+        height: 48px;
         color: $font-color-primary;
         font-weight: 600;
         font-size: 16px;
+        display: flex;
+        align-items: center;
+
+        span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
       }
 
       .course-item-detail-price {
@@ -102,6 +118,7 @@
           font-size: 20px;
           line-height: 1.25;
           text-decoration: none;
+          margin-right: 10px;
         }
       }
 
@@ -180,11 +197,19 @@
       align-items: center;
       margin-bottom: 9px;
 
-      .image-container {
-        border-radius: 30px;
+      .teacher-hover-avatar {
         width: 34px;
         height: 34px;
         margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 50%;
+
+        img {
+          width: 100%;
+        }
       }
 
       .hover-teacher-name {
@@ -208,6 +233,16 @@
       font-weight: 600;
       font-size: 16px;
       margin-bottom: 11px;
+      display: flex;
+      align-items: center;
+
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
     }
 
     .course-item-detail-price {
@@ -225,14 +260,12 @@
         font-size: 20px;
         line-height: 1.25;
         text-decoration: none;
+        margin-right: 10px;
       }
     }
 
     .course-item-detail-vote {
       color: $color-yellow;
-      span {
-        font-family: FontAwesome;
-      }
     }
 
     .course-item-detail-location {

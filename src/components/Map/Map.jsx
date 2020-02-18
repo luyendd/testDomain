@@ -1,8 +1,10 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
+import { connect } from 'react-redux';
+import { getAllLocation } from './redux';
 import './Map.scss';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const Marker = ({ text }) => <div>{text}</div>;
 
 class Map extends React.Component {
 	static defaultProps = {
@@ -19,11 +21,27 @@ class Map extends React.Component {
 		this.state = {};
 	}
 
-	handleApiLoaded = (map, maps) => {
+	componentDidMount() {
+		if (this.props.location != null) {
+			const payload = {
+				url: `v3/centers/all-location`,
+			};
+			this.props.getAllLocation(payload);
+		}
+	}
+
+	renderMarkers = (map, maps) => {
 		// use map and maps objects
+		// let marker = new maps.Marker({
+		// 	position: myLatLng,
+		// 	map,
+		// 	title: 'Hello World!'
+		// });
 	};
 
 	render() {
+		if (this.props.location == null && (this.props.allLocation == null || this.props.allLocation.data == null)) return null;
+
 		return (
 			<div style={{ height: '100%', width: '100%' }}>
 				<GoogleMapReact
@@ -35,17 +53,30 @@ class Map extends React.Component {
 					defaultCenter={this.props.center}
 					defaultZoom={this.props.zoom}
 					yesIWantToUseGoogleMapApiInternals
-					onGoogleApiLoaded={({ map, maps }) => this.handleApiLoaded(map, maps)}
+					onGoogleApiLoaded={({ map, maps }) => this.renderMarkers(map, maps)}
 				>
-					<AnyReactComponent
-						// lat={59.955413}
-						// lng={30.337844}
-						// text="My Marker"
-					/>
+					{this.props.allLocation && this.props.allLocation.data.map((item, index) => {
+						return (
+							<Marker
+								key={index}
+								lat={item.lat}
+								lng={item.lng}
+								text={item.address}
+							/>
+						);
+					})}
 				</GoogleMapReact>
 			</div>
 		)
 	}
 }
 
-export default Map;
+const mapStateToProps = state => ({
+	allLocation: state.AllLocation,
+});
+
+const mapDispatchToProps = dispatch => ({
+	getAllLocation: payload => dispatch(getAllLocation(payload))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Map);

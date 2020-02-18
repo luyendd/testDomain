@@ -7,6 +7,8 @@ import TeacherIntroduction from 'components/TeacherIntroduction/TeacherIntroduct
 import RegisterCourseDetail from 'components/RegisterCourseDetail/RegisterCourseDetail';
 import BasicQuestion from 'components/BasicQuestion/BasicQuestion';
 import RatingNComment from 'components/RatingNComment/RatingNComment';
+import { getCourseDetail } from './redux';
+import { connect } from 'react-redux';
 import './CourseDetail.scss';
 
 const topBars = [
@@ -35,7 +37,13 @@ class CourseDetail extends React.Component {
 		this.state = {
 			activeTopBar: 0,
 		};
-		console.log(this.props.match.params.courseId);
+	}
+
+	componentDidMount() {
+		const payload = {
+			url: `v3/courses/detail/${this.props.match.params.slug}?lop=${this.props.match.params.classId}`,
+		};
+		this.props.getCourseDetail(payload);
 	}
 
 	onChangeTopBar = (index) => {
@@ -45,35 +53,35 @@ class CourseDetail extends React.Component {
 	}
 
 	render() {
+		const data = this.props.courseDetail.data;
+
+		if (data == null) {
+			return null;
+		}
+		console.log(data);
+
 		return (
 			<div>
 				<Banner />
 				<div className="container course-detail-container">
 					<div className="row basic-information">
 						<div className="col-8">
-							<h4 className="course-title">Tiếng anh giao tiếp căn bản</h4>
+							<h4 className="course-title">{data.course.name}</h4>
 							<TopBarDetail data={topBars} activeBar={this.state.activeTopBar} onChangeTopBar={this.onChangeTopBar} />
-							<CourseInformationDetail />
+							<CourseInformationDetail data={data.course.advantages} />
 
 							<div className="course-information course-content border">
 								<div className="description">
 									<h6 className="course-title">Nội dung bài giảng</h6>
-									<div>
-										<p>Các nội dung khoá học giao tiếp cơ bản:</p>
-										<p>1. Kiến thức phát âm - bảng phiên âm quốc tế IPA </p>
-										<p>2. Từ vựng các chủ đề giao tiếp cơ bản hằng ngày (số lượng: 300-500 từ mới)</p>
-										<p>3. Ngữ pháp, cấu trúc câu: Tất tần tất ngữ pháp và cấu trúc câu trình độ A2 (khung trình độ châu Âu, Cambridge)</p>
-										<p>4. Luyện tập, cải thiện các kỹ năng nói, nghe và phản xạ</p>
-									</div>
-
+									<div dangerouslySetInnerHTML={{ __html: data.course.description }} />
 								</div>
 							</div>
 
-							<TeacherIntroduction type={'course'} />
+							<TeacherIntroduction data={data.teacher} type={'course'} />
 						</div>
 						<div className="col-4 register">
 							<div className="sticky-top form-border">
-								<RegisterCourseDetail />
+								<RegisterCourseDetail data={data} />
 							</div>
 						</div>
 					</div>
@@ -88,4 +96,17 @@ class CourseDetail extends React.Component {
 	}
 }
 
-export default withRouter(CourseDetail);
+const mapStateToProps = state => ({
+	courseDetail: state.CourseDetail,
+});
+
+const mapDispatchToProps = dispatch => ({
+	getCourseDetail: payload => dispatch(getCourseDetail(payload))
+});
+
+export default (
+	connect(
+		mapStateToProps,
+		mapDispatchToProps,
+	)(withRouter(CourseDetail))
+);

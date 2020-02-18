@@ -1,0 +1,5 @@
+export const QUERY_GET_GLOBAL = 'QUERY_GET_GLOBAL';
+export const QUERY_POST_GLOBAL = 'QUERY_POST_GLOBAL';
+export const QUERY_LOGIN = 'QUERY_LOGIN';
+export const INIT_MAIN = 'INIT_MAIN';
+export const QUERY_LOGOUT = 'QUERY_LOGOUT';

@@ -1,0 +1,107 @@
+.menu-new {
+    width: 100%;
+
+    .search {
+        height: 46px;
+        margin-bottom: 30px;
+        position: relative;
+
+        .search-input {
+            font-size: 14px;
+            height: 100%;
+            width: 100%;
+            padding: 15px;
+            padding-right: 35px;
+            border-radius: 5px;
+            border: solid 1px #a09d9d;
+            font-family: HelveticaNeue;
+
+            &::placeholder {
+                color: #a8a4a4;
+            }
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 13px;
+            right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .new-type {
+        margin-bottom: 45px;
+
+        .header {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .header-border {
+            height: 3.5px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 30px;
+
+            .left {
+                flex: 7;
+                height: 100%;
+                background-color: #0091ea;
+            }
+
+            .right {
+                margin-left: 10px;
+                flex: 19;
+                height: 100%;
+                background-color: #a7a7a7;
+                opacity: 0.3;
+            }
+        }
+
+        .new-type-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 14px;
+
+            .icon {
+                width: 25px;
+                height: 17px;
+                margin-left: 12px;
+                margin-right: 15px;
+            }
+
+            &.item-border {
+                &.item-border-top {
+                    padding-top: 20px;
+                    margin-top: 20px;
+                    background-position: top;
+                }
+
+                &.item-border-bottom {
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                    background-position: bottom;
+                }
+
+                background-image: linear-gradient(to right, #7070707e 50%, rgba(255, 255, 255, 0) 0%);
+                background-size: 26.4px 1px;
+                background-repeat: repeat-x;
+            }
+
+            .special-title {
+                color: #0091ea;
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            .new-title {
+                font-size: 14px;
+                color: #333333;
+            }
+        }
+    }
+}

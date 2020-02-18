@@ -19,6 +19,7 @@ class YoutubeComp extends React.Component {
 		return (
 			<YouTube
 				videoId={this.props.videoId}
+				id={this.props.id}
 				//https://developers.google.com/youtube/player_parameters#IFrame_Player_API
 				opts={this.props.opts}
 			/>

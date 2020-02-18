@@ -111,7 +111,7 @@ class Footer extends React.Component {
 						<div className="container footer-end-container">
 							<div className="row footer-end-content">
 								<div className="col-6 footer-end-item">
-									<img  src={`${process.env.PUBLIC_URL}/assets//images/logo/Logo-edutalk.png`}  height="42px" width="23px"
+									<img src={`${process.env.PUBLIC_URL}/assets//images/logo/Logo-edutalk.png`} height="42px" width="23px"
 										className="logo-home" alt="" />
 								</div>
 								<div className="col-6 footer-end-item">

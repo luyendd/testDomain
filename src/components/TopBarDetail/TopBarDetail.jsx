@@ -9,7 +9,9 @@ class TopBarDetail extends React.Component {
 	}
 
 	onChangeTopBar = (index) => {
-		this.props.onChangeTopBar(index);
+		if (this.props.activeBar !== index) {
+			this.props.onChangeTopBar(index);
+		}
 	}
 
 	render() {

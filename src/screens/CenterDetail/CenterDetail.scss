@@ -1,0 +1,121 @@
+.teacher-detail-information {
+    margin-top: 40px;
+
+    .course-title {
+        color: #4d658b;
+        font-weight: bold;
+    }
+
+    .basic-information {
+        .course-title {
+            margin-top: 8px;
+            padding-bottom: 21px;
+        }
+
+        .map {
+            height: 322px;
+            margin-bottom: 30px;
+        }
+
+        .video {
+            margin-bottom: 30px;
+            border-radius: 0;
+            height: 421px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            >div {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .register {
+            .sticky-top {
+                top: 65px;
+                margin-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+                z-index: 100;
+                border-radius: 5px;
+            }
+
+            .register-form-border {
+                border-radius: 5px;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+                border: solid 1px #bbc8de;
+
+                .register-form {
+                    .course-title {
+                        padding-bottom: 11px;
+                        margin-top: 13px;
+                        margin-bottom: 0;
+                        border-bottom: solid 1px #70707091;
+                    }
+
+                    .register-form-body {
+                        padding-top: 17px;
+
+                        .register-form-body-item {
+                            border-radius: 2px;
+                            border: solid 1px #bbc8de;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            margin-bottom: 13px;
+
+                            >input {
+                                border: 0;
+                                background-color: #fff;
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                padding-top: 5px;
+                                color: #818181;
+                                font-size: 12px;
+                                text-transform: uppercase;
+                                width: calc(100% - 20px);
+                            }
+
+                            .value {
+                                font-size: 16px;
+                                color: #4d658b;
+                                text-transform: none;
+                                margin-bottom: 12px;
+                            }
+                        }
+
+                        .register-form-header-item {
+                            padding-bottom: 14px;
+
+                            .chat-btn {
+                                background-color: #4d658b;
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .best-course,
+    .best-teacher {
+        padding-top: 3px;
+        padding-bottom: 0;
+
+        .edu-title {
+            align-items: baseline;
+
+            h3 {
+                font-weight: bold;
+                color: #4d658b;
+                padding: 0;
+            }
+
+            a {
+                padding: 0;
+            }
+        }
+    }
+}

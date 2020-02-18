@@ -1,0 +1,12 @@
+import { QUERY_POST_GLOBAL } from "redux/actions";
+const QUERY_POST_CONTACT_SEND_MESSAGE_SUCCEED = 'QUERY_POST_CONTACT_SEND_MESSAGE_SUCCEEDED';
+const QUERY_POST_CONTACT_SEND_MESSAGE_FAIL = 'QUERY_POST_CONTACT_SEND_MESSAGE_FAILED';
+
+export const sendMessage = (payload) => ({
+    type: QUERY_POST_GLOBAL,
+    reponses: {
+        succeed: QUERY_POST_CONTACT_SEND_MESSAGE_SUCCEED,
+        fail: QUERY_POST_CONTACT_SEND_MESSAGE_FAIL,
+    },
+    payload,
+});

@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import EduTeachers from 'components/EduTeachers/EduTeachers';
 import EduCenters from 'components/EduCenters/EduCenters';
+import { getClassRoomsHomeByTeachers, getClassRoomsHomeByCenters } from './redux';
 
 class EduHome extends React.Component {
 	constructor(props) {
@@ -9,14 +11,33 @@ class EduHome extends React.Component {
 		this.state = {};
 	}
 
+	componentDidMount() {
+		this.props.getClassRoomsHomeByTeachers();
+		this.props.getClassRoomsHomeByCenters();
+	}
+
 	render() {
 		return (
-			<div>
-				<EduTeachers route={'Home'} image={'./assets/images/edu-banner.png'}/>
-				<EduCenters image={'./assets/images/edu-banner.png'}/>
-			</div>
+			<>
+				<EduTeachers data={this.props.classRoomsHomeByTeachers} route={'Home'} image={'./assets/images/edu-banner.png'} />
+				<EduCenters data={this.props.classRoomsHomeByCenters} image={'./assets/images/edu-banner.png'} />
+			</>
 		)
 	}
 }
 
-export default EduHome;
+const mapStateToProps = state => ({
+	classRoomsHomeByTeachers: state.ClassRoomsHomeByTeachers,
+	classRoomsHomeByCenters: state.ClassRoomsHomeByCenters,
+});
+
+
+const mapDispatchToProps = dispatch => ({
+	getClassRoomsHomeByTeachers: payload => dispatch(getClassRoomsHomeByTeachers(payload)),
+	getClassRoomsHomeByCenters: payload => dispatch(getClassRoomsHomeByCenters(payload))
+});
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps,
+)(EduHome);

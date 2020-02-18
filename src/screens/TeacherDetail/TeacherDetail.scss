@@ -18,11 +18,11 @@
             .teacher-information-content {
                 padding-bottom: 25px;
 
-                .story {
-                    span {
-                        margin-bottom: 15px;
-                    }
-                }
+                // .story {
+                //     span {
+                //         margin-bottom: 15px;
+                //     }
+                // }
             }
 
             .more-btn {
@@ -128,45 +128,6 @@
 
             a {
                 padding: 0;
-            }
-        }
-
-        .edu-content {
-            position: relative;
-
-            .slide-btn {
-                position: absolute;
-                top: calc(50% - 44px);
-                width: 44px;
-                height: 44px;
-                z-index: 10;
-
-                i {
-                    color: #000;
-                    border-radius: 47px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.16);
-                    background-color: #ffffff;
-                    height: 100%;
-                }
-
-                .fa-chevron-left {
-                    padding-right: 5px;
-                }
-
-                .fa-chevron-right {
-                    padding-left: 3px;
-                }
-
-                &.previous-btn {
-                    left: 9px;
-                }
-
-                &.next-btn {
-                    right: 9px;
-                }
             }
         }
     }

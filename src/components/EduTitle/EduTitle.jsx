@@ -1,5 +1,4 @@
 import React from 'react';
-import ImageComp from 'components/ImageComp/ImageComp';
 import './EduTitle.scss';
 
 class EduTitle extends React.Component {
@@ -14,7 +13,9 @@ class EduTitle extends React.Component {
 			this.props.title ? (
 				<div className="row title-container">
 					<div className="col-12">
-						<ImageComp styleName={'title-img'} src={'./assets/images/icon-hat.png'} />
+						<div className={`image-container title-img`}>
+							<img src={`${process.env.PUBLIC_URL}/assets/images/icon-hat.png`} alt="" />
+						</div>
 						<h2 className="background"><span>{this.props.title}</span></h2>
 					</div>
 				</div>

@@ -3,23 +3,9 @@ import ImageComp from 'components/ImageComp/ImageComp';
 import { FaRegCalendar, FaUsers, FaRegClock } from 'react-icons/fa';
 import { TiPinOutline } from 'react-icons/ti';
 import './RegisterCourseDetail.scss';
-
-const data = {
-	salePrice: '10.000.000',
-	price: '15.000.000',
-	emptySlot: 17,
-	duration: '4 tháng',
-	level: 'Trình độ: Giao tiếp cơ bản',
-	totalSlot: 20,
-	opening: '11 - 12 - 2019',
-	time: '19h30 - 21h',
-};
+import { formatNumber } from 'ultis/commom';
 
 class RegisterCourseDetail extends React.Component {
-	static defaultProps = {
-		data
-	};
-
 	constructor(props) {
 		super(props);
 
@@ -27,20 +13,22 @@ class RegisterCourseDetail extends React.Component {
 	}
 
 	render() {
+		const { course } = this.props.data;
+
 		return (
 			<>
 				<div className="register-img">
-					<ImageComp src={'assets/images/register-form.png'} />
+					<ImageComp local={false} src={course.image.path} />
 				</div>
 				<div className="register-form">
 					<div className="register-form-header-item">
 						<div className="ed-ct-dt-price">
-							<span>{this.props.data.salePrice}</span>
-							<span>{this.props.data.price}</span>
+							<span>{formatNumber(this.props.data.course.fees * (1 - this.props.data.course.sale / 100))}</span>
+							<span>{formatNumber(this.props.data.course.fees)}</span>
 						</div>
 						<TiPinOutline className={'big-icon'} />
 					</div>
-					<div className="register-form-header-item slot">Còn {this.props.data.emptySlot} suất</div>
+					<div className="register-form-header-item slot">Còn {this.props.data.total_student - this.props.data.current_student} suất</div>
 					<div className="register-form-header-item">
 						<button className="register-trial-study-btn">Đăng ký học thử</button>
 						<button className="register-study-btn">Đăng ký học</button>
@@ -48,23 +36,23 @@ class RegisterCourseDetail extends React.Component {
 					<div className="register-form-body">
 						<div className="register-form-body-item">
 							<FaRegCalendar className={'icon'} />
-							<span>{this.props.data.duration}</span>
+							<span>{course.name}</span>
 						</div>
 						<div className="register-form-body-item">
 							<ImageComp src={'assets/images/icons/three-tier-pyramid.png'} styleName={'custom-icon'} />
-							<span>{this.props.data.level}</span>
+							<span>{course.times}</span>
 						</div>
 						<div className="register-form-body-item">
 							<FaUsers className={'icon'} />
-							<span>Học Viên: {this.props.data.totalSlot} người / lớp</span>
+							<span>Học Viên: {this.props.data.total_student} người / lớp</span>
 						</div>
 						<div className="register-form-body-item">
 							<FaRegCalendar className={'icon'} />
-							<span>Khai Giảng : {this.props.data.opening}</span>
+							<span>Khai Giảng : {this.props.data.start_time}</span>
 						</div>
 						<div className="register-form-body-item">
 							<FaRegClock className={'icon'} />
-							<span>Thời gian: {this.props.data.time}</span>
+							<span>Thời gian: {this.props.data.learning_schedule}</span>
 						</div>
 					</div>
 					<div className="register-form-footer">

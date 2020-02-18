@@ -5,93 +5,6 @@ import ImageComp from 'components/ImageComp/ImageComp';
 import CourseItem from 'components/CourseItem/CourseItem';
 import './EduCenters.scss';
 
-const courses = [
-	{
-		id: 1,
-		teacherImg: './assets/images/teacher.png',
-		teacherName: 'Trần Văn A',
-		courseImg: './assets/images/edu-item.png',
-		title: 'Đây là tiêu để của khoá học. Đây là tiêu đề của khoá học.',
-		salePrice: '9.000.000',
-		price: '10.000.000',
-		location: 'Định Công, Hoàng Mai, Hà Nội',
-		emptySlot: '15',
-		totalSlot: '30',
-		openingDate: '',
-		description: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of…',
-	},
-	{
-		id: 2,
-		teacherImg: './assets/images/teacher.png',
-		teacherName: 'Trần Văn A',
-		courseImg: './assets/images/edu-item.png',
-		title: 'Đây là tiêu để của khoá học. Đây là tiêu đề của khoá học.',
-		salePrice: '9.000.000',
-		price: '10.000.000',
-		location: 'Định Công, Hoàng Mai, Hà Nội',
-		emptySlot: '15',
-		totalSlot: '30',
-		openingDate: '',
-		description: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of…',
-	},
-	{
-		id: 3,
-		teacherImg: './assets/images/teacher.png',
-		teacherName: 'Trần Văn A',
-		courseImg: './assets/images/edu-item.png',
-		title: 'Đây là tiêu để của khoá học. Đây là tiêu đề của khoá học.',
-		salePrice: '9.000.000',
-		price: '10.000.000',
-		location: 'Định Công, Hoàng Mai, Hà Nội',
-		emptySlot: '15',
-		totalSlot: '30',
-		openingDate: '',
-		description: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of…',
-	},
-	{
-		id: 4,
-		teacherImg: './assets/images/teacher.png',
-		teacherName: 'Trần Văn A',
-		courseImg: './assets/images/edu-item.png',
-		title: 'Đây là tiêu để của khoá học. Đây là tiêu đề của khoá học.',
-		salePrice: '9.000.000',
-		price: '10.000.000',
-		location: 'Định Công, Hoàng Mai, Hà Nội',
-		emptySlot: '15',
-		totalSlot: '30',
-		openingDate: '',
-		description: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of…',
-	},
-	{
-		id: 5,
-		teacherImg: './assets/images/teacher.png',
-		teacherName: 'Trần Văn A',
-		courseImg: './assets/images/edu-item.png',
-		title: 'Đây là tiêu để của khoá học. Đây là tiêu đề của khoá học.',
-		salePrice: '9.000.000',
-		price: '10.000.000',
-		location: 'Định Công, Hoàng Mai, Hà Nội',
-		emptySlot: '15',
-		totalSlot: '30',
-		openingDate: '',
-		description: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of…',
-	},
-	{
-		id: 6,
-		teacherImg: './assets/images/teacher.png',
-		teacherName: 'Trần Văn A',
-		courseImg: './assets/images/edu-item.png',
-		title: 'Đây là tiêu để của khoá học. Đây là tiêu đề của khoá học.',
-		salePrice: '9.000.000',
-		price: '10.000.000',
-		location: 'Định Công, Hoàng Mai, Hà Nội',
-		emptySlot: '15',
-		totalSlot: '30',
-		openingDate: '',
-		description: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of…',
-	},
-];
-
 class EduCenters extends React.Component {
 	constructor(props) {
 		super(props);
@@ -117,7 +30,11 @@ class EduCenters extends React.Component {
 							</div>
 						)}
 
-						{courses.map((item, index) => {
+						{this.props.data && this.props.data.data.map((item, index) => {
+							if (index > 5) {
+								return null;
+							}
+							
 							return (
 								<CourseItem data={item} key={index} />
 							);
