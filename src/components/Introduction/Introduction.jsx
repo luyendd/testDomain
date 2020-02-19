@@ -1,6 +1,7 @@
 import React from 'react';
 import ImageComp from 'components/ImageComp/ImageComp';
 import EduTitle from 'components/EduTitle/EduTitle';
+import { IoIosCheckmark } from 'react-icons/io';
 import './Introduction.scss';
 
 const introList = [
@@ -36,6 +37,7 @@ class Introduction extends React.Component {
 								{introList.map((value, index) => {
 									return (
 										<li key={index}>
+											<IoIosCheckmark className="icon" />
 											<p>{value.detail}</p>
 										</li>
 									);

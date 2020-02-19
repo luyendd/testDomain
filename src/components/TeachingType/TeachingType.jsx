@@ -9,7 +9,7 @@ const teachTypes = [
 			alt: 'Edutalk Center',
 		},
 		title: 'Edutalk Center',
-		detail: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been',
+		detail: 'Hệ thống trung tâm tiếng Anh uy tín',
 	},
 	{
 		img: {
@@ -17,7 +17,7 @@ const teachTypes = [
 			alt: 'Edutalk Teachers',
 		},
 		title: 'Edutalk Teachers',
-		detail: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been',
+		detail: 'Hệ thống giảng viên tiếng Anh chất lượng',
 	},
 	{
 		img: {
@@ -25,7 +25,7 @@ const teachTypes = [
 			alt: 'Edutalk Coach',
 		},
 		title: 'Edutalk Coach',
-		detail: 'Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been',
+		detail: 'Hệ thống gia sư chất lượng',
 	},
 ];
 
