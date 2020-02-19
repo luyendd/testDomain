@@ -10,6 +10,7 @@ import { CenterDetail } from "screens/CenterDetail/redux";
 import { SliderData } from "components/SliderComp/redux";
 import { Authentication } from "./reducers/Authentication-reducer";
 import { UserInfo } from "./reducers/UserInfo-reducer";
+import { News, NewDetail } from "screens/News/redux";
 
 export default combineReducers({
     Authentication,
@@ -25,4 +26,6 @@ export default combineReducers({
     ExperienceNewHome,
     SliderData,
     UserInfo,
+    News,
+    NewDetail,
 });

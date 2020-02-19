@@ -38,8 +38,6 @@ class SliderComp extends React.Component {
         const payload = {
             url: this.props.url,
         };
-        console.log(payload);
-
         this.props.getSliderData(payload);
     }
 
@@ -64,8 +62,6 @@ class SliderComp extends React.Component {
         }
 
         if (data == null) return null;
-
-        console.log(this.props.sliderData);
 
         return (
             <div className="row edu-teacher best-course">

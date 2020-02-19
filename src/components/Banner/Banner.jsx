@@ -31,7 +31,7 @@ class Banner extends React.Component {
 					</div>
 					<div className="banner-content-home">
 						{this.props.route === 'Home' && (
-							<h4>Nền tảng kết nối trực tiếp từ giảng viên tới Học Viên</h4>
+							<h4>Nền tảng đặt chỗ khoá học phù hợp</h4>
 						)}
 
 						<div className="banner-search">

@@ -1,7 +1,7 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { QUERY_GET_GLOBAL } from 'redux/actions';
 
-function* getQuery(payload) {
+function* getQuery({ url, data }) {
     // const myHeaders = new Headers();
 
     // const myRequest = new Request('url', {
@@ -12,7 +12,7 @@ function* getQuery(payload) {
     // });
 
     // Default options are marked with *
-    const response = yield fetch(`https://edutalk.edu.vn/api/${payload.url}`)
+    const response = yield fetch(`https://edutalk.edu.vn/api/${url}`)
         .then((response) => {
             if (!response.ok) {
                 console.log(response);
@@ -24,7 +24,9 @@ function* getQuery(payload) {
             return response.json();
         })
         .catch((error) => {
-            throw new Error(payload.url, error);
+            console.log(error);
+            
+            throw new Error(url, error);
         });
 
     return response;

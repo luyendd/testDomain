@@ -1,15 +1,20 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { QUERY_POST_GLOBAL } from 'redux/actions';
-// import store from 'redux/store';
+import store from 'redux/store';
 
-function* postQuery({url, data}) {
-    // const data = {
-    //     ...payload,
-    //     // Authorization: `Bearer ${store.getState().UserInfo.token}`,
-    // };
+function* postQuery({ url, data }) {
+    const param = {
+        ...data,
+        Authorization: ` Bearer ${store.getState().UserInfo.token}`,
+    };
+
+    let body = new FormData();
+    body.append('json', JSON.stringify(param));
 
     const response = yield fetch(`http://127.0.0.1:8000/api/${url}`, {
-        method: "POST", body: JSON.stringify(data),
+        method: "POST",
+        body: body,
+        credentials: "same-origin",
     })
         .then(r => {
             return r.json().then(data => ({ ok: r.ok, status: r.status, body: data }))

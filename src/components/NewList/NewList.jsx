@@ -1,51 +1,6 @@
 import React from 'react';
-import './NewList.scss';
 import SpecialItem from 'components/Luggage/SpecialItem/SpecialItem';
-
-const newList = [
-    {
-        id: 1,
-        img: 'assets/images/edu-intro.png',
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-        newType: 'Kinh Nghiệm',
-        type: 1,
-    },
-    {
-        id: 2,
-        img: 'assets/images/edu-intro.png',
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-        newType: 'Trải Nghiệm',
-        type: 2,
-    },
-    {
-        id: 3,
-        img: 'assets/images/edu-intro.png',
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-        newType: 'Kinh Nghiệm',
-        type: 1,
-    },
-    {
-        id: 4,
-        img: 'assets/images/edu-intro.png',
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-        newType: 'Trải Nghiệm',
-        type: 2,
-    },
-    {
-        id: 5,
-        img: 'assets/images/edu-intro.png',
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-        newType: 'Kinh Nghiệm',
-        type: 1,
-    },
-    {
-        id: 6,
-        img: 'assets/images/edu-intro.png',
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-        newType: 'Trải Nghiệm',
-        type: 2,
-    },
-];
+import './NewList.scss';
 
 class NewList extends React.Component {
     constructor(props) {
@@ -58,9 +13,9 @@ class NewList extends React.Component {
         return (
             <>
                 <div className="row new-list">
-                    {newList.map((item, index) => {
+                    {this.props.posts && this.props.posts.data.map((item, index) => {
                         return (
-                            <SpecialItem key={index}  {...item} />
+                            <SpecialItem newType={true} key={index} img={item.featured_image.path_string} data={item} />
                         );
                     })}
                 </div>

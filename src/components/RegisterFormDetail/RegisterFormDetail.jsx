@@ -5,7 +5,11 @@ class RegisterFormDetail extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {};
+        this.state = {
+            phone: '',
+            teacherId: '',
+            classId: '',
+        };
     }
 
     render() {
@@ -28,7 +32,7 @@ class RegisterFormDetail extends React.Component {
                     </div>
                     <div className="register-form-body-item">
                         <input type="text" value="Thời gian học" disabled />
-                        <input type="text" className="value" defaultValue="03/11/2019 - 19h30" />
+                        <input type="text" className="value disable-comp" defaultValue="03/11/2019 - 19h30" />
                     </div>
                     <div className="register-form-header-item">
                         <button className="chat-btn">Trò chuyện</button>

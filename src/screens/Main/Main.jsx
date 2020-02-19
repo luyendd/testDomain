@@ -4,6 +4,8 @@ import {
 	Switch,
 	Route,
 } from "react-router-dom";
+import { connect } from 'react-redux';
+import ReactGA from "react-ga";
 import Home from 'screens/Home/Home';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
@@ -22,7 +24,6 @@ import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
 import Login from 'screens/Login/Login';
 import CenterDetail from 'screens/CenterDetail/CenterDetail';
 import { initMain } from './redux';
-import { connect } from 'react-redux';
 import './Main.scss';
 
 class Main extends React.Component {
@@ -36,6 +37,7 @@ class Main extends React.Component {
 
 	componentDidMount() {
 		this.props.initMain();
+		ReactGA.initialize('UA-146425017-1');
 	}
 
 	hideComp = () => {
@@ -76,6 +78,9 @@ class Main extends React.Component {
 								<Coaches />
 							</Route>
 							<Route path="/news">
+								<News />
+							</Route>
+							<Route path="/new/:slug">
 								<News />
 							</Route>
 							<Route path="/contact">

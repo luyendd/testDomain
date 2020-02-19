@@ -104,7 +104,7 @@ class EduCoach extends React.Component {
 			<div className="container">
 				<div className="row edu-teacher">
 					<div className="edu-title">
-						<h3>Edutalk Teacher - Kết nối gia sư uy tín</h3>
+						<h3>Edutalk Teacher - Hệ thống gia sư chất lượng</h3>
 						<Link className="view-all-link" to="/">
 							Xem tất cả
 						<FiChevronsRight className="icon-view-all" />

@@ -66,7 +66,7 @@ class CenterDetail extends React.Component {
                 <div className="container teacher-detail-information">
                     <div className="row basic-information">
                         <div className="col-8">
-                            <h4 className="course-title">Giảng viên: Đây là tên của giảng viên</h4>
+                            <h4 className="course-title">{data.name}</h4>
                             <TopBarDetail data={topBars} activeBar={this.state.activeTopBar} onChangeTopBar={this.onChangeTopBar} />
                             
                             <div className="course-information course-content border">

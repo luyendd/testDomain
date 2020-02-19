@@ -82,7 +82,6 @@ export class TeacherItem extends React.Component {
         if (this.state.redirect === true) {
             return <Redirect push to={`/teacher/${this.props.data.slug}`} />
         }
-        console.log(this.props.data);
 
         return (
             <div className={this.props.className != null ? this.props.className : 'col-3'} onClick={this.goToTeacherDetail}>

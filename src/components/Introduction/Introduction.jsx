@@ -4,7 +4,7 @@ import EduTitle from 'components/EduTitle/EduTitle';
 import './Introduction.scss';
 
 const introList = [
-	{ detail: 'Lorem Ipsum is simply dummy text of the printing.' },
+	{ detail: 'Lựa chọn' },
 	{ detail: 'Lorem Ipsum is simply dummy text of the printing.' },
 	{ detail: 'Lorem Ipsum is simply dummy text of the printing.' },
 ];
@@ -19,21 +19,18 @@ class Introduction extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				{this.props.route === 'Home' && <EduTitle title={'Giới thiệu về Edutalk Edu'} />}
+				{this.props.route === 'Home' && <EduTitle title={'Giới thiệu về Edutalk'} />}
 				<div className="row introduction">
 					<div className="col-6">
 						<ImageComp src={'./assets/images/edu-intro.png'} />
 					</div>
 					<div className="col-6">
 						<div className="intro-content">
-							<div className="intro-navigate">
-								<p className="intro-navigate-header">01. </p><span className="intro-navigate-detail">Online Edu</span>
-							</div>
 							<div className="intro-title">
-								<h2>Nền tảng kết nối trực tiếp từ giảng viên tới Học Viên</h2>
+								<h2>Nền tảng đặt chỗ khoá học</h2>
 							</div>
 							<div className="intro-description">
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+								<p>Edutalk giúp bạn:</p>
 							</div>
 							<ul className="intro-list">
 								{introList.map((value, index) => {
@@ -44,7 +41,7 @@ class Introduction extends React.Component {
 									);
 								})}
 							</ul>
-							<button className="intro-btn">Đăng ký ngay</button>
+							<button className="intro-btn">Đăng kí nhận tư vấn ngay</button>
 						</div>
 					</div>
 				</div>

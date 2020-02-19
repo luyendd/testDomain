@@ -17,7 +17,7 @@ class EduCenters extends React.Component {
 			<div className="container">
 				<div className="row edu-center">
 					<div className="edu-title">
-						<h3>Edutalk Teacher - Kết nối trung tâm uy tín</h3>
+						<h3>Edutalk Teacher - Hệ thống trung tâm tiếng Anh uy tín</h3>
 						<Link className="view-all-link" to="/">
 							Xem tất cả
 						<FiChevronsRight className="icon-view-all" />
@@ -30,7 +30,7 @@ class EduCenters extends React.Component {
 							</div>
 						)}
 
-						{this.props.data && this.props.data.data.map((item, index) => {
+						{this.props.data && this.props.data.data && this.props.data.data.map((item, index) => {
 							if (index > 5) {
 								return null;
 							}

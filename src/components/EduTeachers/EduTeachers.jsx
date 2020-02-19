@@ -103,10 +103,10 @@ class EduTeachers extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				{this.props.route === 'Home' && <EduTitle title={'Chúng ta hãy học cùng nhau'} />}
+				{this.props.route === 'Home' && <EduTitle title={'Lựa chọn khoá học phù hợp'} />}
 				<div className="row edu-teacher">
 					<div className="edu-title">
-						<h3>Edutalk Teacher - Kết nối giảng viên uy tín</h3>
+						<h3>Edutalk Teacher - Hệ thống giảng viên tiếng Anh chất lượng</h3>
 						<Link className="view-all-link" to="/">
 							Xem tất cả
 						<FiChevronsRight className="icon-view-all" />

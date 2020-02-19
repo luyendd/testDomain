@@ -1,39 +1,39 @@
 import { QUERY_GET_GLOBAL } from "redux/actions";
-const QUERY_GET_SPECIAL_NEW_HOME_SUCCEED = 'QUERY_GET_SPECIAL_NEW_HOME_SUCCEEDED';
-const QUERY_GET_SPECIAL_NEW_HOME_FAIL = 'QUERY_GET_SPECIAL_NEW_HOME_FAILED';
-const QUERY_GET_EXPERIENCE_NEW_HOME_SUCCEED = 'QUERY_GET_EXPERIENCE_NEW_HOME_SUCCEEDED';
-const QUERY_GET_EXPERIENCE_NEW_HOME_FAIL = 'QUERY_GET_EXPERIENCE_NEW_HOME_FAILED';
+const QUERY_GET_NEWS_SUCCEED = 'QUERY_GET_NEWS_SUCCEEDED';
+const QUERY_GET_NEWS_FAIL = 'QUERY_GET_NEWS_FAILED';
+const QUERY_GET_NEWS_DETAIL_SUCCEED = 'QUERY_GET_NEWS_DETAIL_SUCCEEDED';
+const QUERY_GET_NEWS_DETAIL_FAIL = 'QUERY_GET_NEWS_DETAIL_FAILED';
 
-export const getSpecialNewHome = (payload = { url: 'v3/posts?termId=1' }) => ({
+export const getNews = (payload = { url: 'v3/posts' }) => ({
     type: QUERY_GET_GLOBAL,
     reponses: {
-        succeed: QUERY_GET_SPECIAL_NEW_HOME_SUCCEED,
-        fail: QUERY_GET_SPECIAL_NEW_HOME_FAIL,
+        succeed: QUERY_GET_NEWS_SUCCEED,
+        fail: QUERY_GET_NEWS_FAIL,
     },
     payload,
 });
 
-export const SpecialNewHome = (state = null, action) => {
+export const News = (state = null, action) => {
     switch (action.type) {
-        case QUERY_GET_SPECIAL_NEW_HOME_SUCCEED:
+        case QUERY_GET_NEWS_SUCCEED:
             return action.payload;
         default:
             return state;
     }
 };
 
-export const getExperienceHome = (payload = { url: 'v3/posts?termId=2' }) => ({
+export const getNewDetail = (payload) => ({
     type: QUERY_GET_GLOBAL,
     reponses: {
-        succeed: QUERY_GET_EXPERIENCE_NEW_HOME_SUCCEED,
-        fail: QUERY_GET_EXPERIENCE_NEW_HOME_FAIL,
+        succeed: QUERY_GET_NEWS_DETAIL_SUCCEED,
+        fail: QUERY_GET_NEWS_DETAIL_FAIL,
     },
     payload,
 });
 
-export const ExperienceNewHome = (state = null, action) => {
+export const NewDetail = (state = null, action) => {
     switch (action.type) {
-        case QUERY_GET_EXPERIENCE_NEW_HOME_SUCCEED:
+        case QUERY_GET_NEWS_DETAIL_SUCCEED:
             return action.payload;
         default:
             return state;

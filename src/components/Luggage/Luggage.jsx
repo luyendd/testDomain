@@ -22,7 +22,7 @@ class Luggage extends React.Component {
 		return (
 			<div className="container">
 				<div className="luggage-container">
-					<EduTitle title={'Edutalk hành trang cho bạn'} />
+					<EduTitle title={'Đồng hành cùng học viên'} />
 					{this.props.specialNewHome && <>
 						<h3 className="luggage-header">Trải nghiệm đặc biệt</h3>
 						<div className="row special-experience">

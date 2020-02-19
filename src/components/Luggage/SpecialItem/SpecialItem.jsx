@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageComp from 'components/ImageComp/ImageComp';
+import { Link } from 'react-router-dom';
 import './SpecialItem.scss';
 
 class SpecialItem extends React.Component {
@@ -11,7 +12,7 @@ class SpecialItem extends React.Component {
 
 	render() {
 		return (
-			<div className={`${this.props.newType != null ? 'col-6' : 'col-4'} sp-ex-item`}>
+			<Link to={`/new/${this.props.data.slug}`} className={`${this.props.newType != null ? 'col-6' : 'col-4'} sp-ex-item`}>
 				<ImageComp local={false} src={this.props.img} rounded={true} />
 				{this.props.newType != null && (
 					<div className="new-type">
@@ -22,7 +23,7 @@ class SpecialItem extends React.Component {
 				<div className="sp-ex-description sp-ex-item-description rounded-bottom">
 					<span>{this.props.data.title}</span>
 				</div>
-			</div >
+			</Link >
 		)
 	}
 }

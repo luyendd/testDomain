@@ -1,24 +1,7 @@
 import React from 'react';
 import { MdSearch } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import './MenuNew.scss';
-
-const news = [
-    {
-        title: 'Đây là tiêu đề của bài viết vừa mới được đăng.',
-    },
-    {
-        title: 'Đây là tiêu đề của bài viết vừa mới được đăng.',
-    },
-    {
-        title: 'Đây là tiêu đề của bài viết vừa mới được đăng.',
-    },
-    {
-        title: 'Đây là tiêu đề của bài viết vừa mới được đăng.',
-    },
-    {
-        title: 'Đây là tiêu đề của bài viết vừa mới được đăng.',
-    },
-];
 
 class MenuNew extends React.Component {
     constructor(props) {
@@ -42,20 +25,14 @@ class MenuNew extends React.Component {
                         <div className="right"></div>
                     </div>
 
-                    <div className="new-type-item">
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/icon-hat-blue.png`} className="icon" alt="" />
-                        <div className="title">Trải nghiệm đặc biệt ( 50 )</div>
-                    </div>
-
-                    <div className="new-type-item item-border item-border-top">
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/icon-hat-blue.png`} className="icon" alt="" />
-                        <div className="title">Kinh nghiệm học ( 50 )</div>
-                    </div>
-
-                    <div className="new-type-item item-border item-border-top">
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/icon-hat-blue.png`} className="icon" alt="" />
-                        <div className="title">Tuyển dụng ( 02 )</div>
-                    </div>
+                    {this.props.terms && this.props.terms.map((item, index) => {
+                        return (
+                            <div key={index} className={`new-type-item ${index !== 0 ? 'item-border item-border-top' : ''}`}>
+                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon-hat-blue.png`} className="icon" alt="" />
+                                <div className="title">{item.name} ( {item.total} )</div>
+                            </div>
+                        )
+                    })}
                 </div>
 
                 <div className="new-type">
@@ -65,12 +42,12 @@ class MenuNew extends React.Component {
                         <div className="right"></div>
                     </div>
 
-                    {news.map((item, index) => {
+                    {this.props.newPost.map((item, index) => {
                         return (
-                            <div key={index} className="new-type-item item-border item-border-bottom">
+                            <Link to={`/new/${item.slug}`} key={index} className="new-type-item item-border item-border-bottom">
                                 <div className="special-title">0{index + 1}<span className="new-title">. {item.title}</span>
                                 </div>
-                            </div>
+                            </Link>
                         );
                     })}
 
