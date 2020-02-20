@@ -5,6 +5,8 @@ import ImageComp from 'components/ImageComp/ImageComp';
 import './UserInformation.scss';
 import AccountCourses from 'components/UserComp/AccountCourses/AccountCourses';
 import AccountInfo from 'components/UserComp/AccountInfo/AccountInfo';
+import { getUserInformation } from './redux';
+import { connect } from 'react-redux';
 
 const topBars = [
     {
@@ -37,6 +39,15 @@ class UserInformation extends React.Component {
             activeTopBar: 0,
             activeComp: <AccountInfo />,
         };
+    }
+
+    componentDidMount() {
+        const params = {
+            url: 'v3/students',
+            data: {}
+        };
+
+        this.props.getUserInformation(params);
     }
 
     onChangeTopBar = (index) => {
@@ -85,7 +96,7 @@ class UserInformation extends React.Component {
                             <TopBarDetail data={topBars} activeBar={this.state.activeTopBar} onChangeTopBar={this.onChangeTopBar} />
 
                             {this.state.activeComp}
-                            
+
                         </div>
                     </div>
                 </div>
@@ -94,4 +105,17 @@ class UserInformation extends React.Component {
     }
 }
 
-export default UserInformation;
+const mapStateToProps = state => ({
+    userInformation: state.UserInformation,
+});
+
+const mapDispatchToProps = dispatch => ({
+    getUserInformation: payload => dispatch(getUserInformation(payload))
+});
+
+export default (
+    connect(
+        mapStateToProps,
+        mapDispatchToProps,
+    )(UserInformation)
+);

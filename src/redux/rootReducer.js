@@ -11,6 +11,8 @@ import { SliderData } from "components/SliderComp/redux";
 import { Authentication } from "./reducers/Authentication-reducer";
 import { UserInfo } from "./reducers/UserInfo-reducer";
 import { News, NewDetail } from "screens/News/redux";
+import { BestClassRoomsByCenter, BestClassRoomsByTeacher } from "components/MostSelectedCourses/redux";
+import { UserInformation } from "screens/UserInformation/redux";
 
 export default combineReducers({
     Authentication,
@@ -28,4 +30,7 @@ export default combineReducers({
     UserInfo,
     News,
     NewDetail,
+    BestClassRoomsByCenter,
+    BestClassRoomsByTeacher,
+    UserInformation,
 });

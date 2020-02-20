@@ -18,7 +18,7 @@ export const roundRating = (value, step = 0.5) => {
 }
 
 export const formatNumber = (value) => {
-	return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+	return roundRating(value, 1).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 }
 
 export const setLocal = (name, value) => {

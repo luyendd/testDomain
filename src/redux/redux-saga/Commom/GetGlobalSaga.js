@@ -13,20 +13,15 @@ function* getQuery({ url, data }) {
 
     // Default options are marked with *
     const response = yield fetch(`https://edutalk.edu.vn/api/${url}`)
-        .then((response) => {
-            if (!response.ok) {
-                console.log(response);
-                throw new Error('Network response was not ok');
+        .then(r => {
+            return r.json().then(data => ({ ok: r.ok, status: r.status, body: data }))
+        })
+        .then(r => {
+            if (r.ok === false) {
+                throw new Error(r.body.error);
+            } else {
+                return r.body;
             }
-            return response;
-        })
-        .then((response) => {
-            return response.json();
-        })
-        .catch((error) => {
-            console.log(error);
-            
-            throw new Error(url, error);
         });
 
     return response;

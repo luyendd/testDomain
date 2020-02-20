@@ -1,39 +1,8 @@
 import React from 'react';
-import './MostSelectedCourses.scss';
+import { connect } from 'react-redux';
 import CourseContent from './CourseContent/CourseContent';
-
-const teacherCourses = [
-	{
-		teacherName: 'Trần Văn A',
-		courseImg: './assets/images/edu-most-seleted-course.png',
-		title: 'Đây là tiêu để của khoá học. Đây là tiêu đề của khoá học.',
-		salePrice: '9.000.000',
-		price: '10.000.000',
-		location: 'Định Công, Hoàng Mai, Hà Nội',
-		emptySlot: '15',
-		totalSlot: '30',
-	},
-	{
-		teacherName: 'Trần Văn A',
-		courseImg: './assets/images/edu-most-seleted-course.png',
-		title: 'Đây là tiêu để của khoá học. Đây là tiêu đề của khoá học.',
-		salePrice: '9.000.000',
-		price: '10.000.000',
-		location: 'Định Công, Hoàng Mai, Hà Nội',
-		emptySlot: '15',
-		totalSlot: '30',
-	},
-	{
-		teacherName: 'Trần Văn A',
-		courseImg: './assets/images/edu-most-seleted-course.png',
-		title: 'Đây là tiêu để của khoá học. Đây là tiêu đề của khoá học.',
-		salePrice: '9.000.000',
-		price: '10.000.000',
-		location: 'Định Công, Hoàng Mai, Hà Nội',
-		emptySlot: '15',
-		totalSlot: '30',
-	},
-];
+import { getBestClassRoomsByCenter, getBestClassRoomsByTeacher } from './redux';
+import './MostSelectedCourses.scss';
 
 const courseTypes = [
 	{ title: '#khoahocgiaotiep' },
@@ -50,6 +19,11 @@ class MostSelectedCourses extends React.Component {
 		this.state = {
 			activeTab: 3,
 		};
+	}
+
+	componentDidMount() {
+		this.props.getBestClassRoomsByCenter();
+		this.props.getBestClassRoomsByTeacher();
 	}
 
 	changeCourseType = (index) => {
@@ -76,10 +50,10 @@ class MostSelectedCourses extends React.Component {
 
 					<div className="row">
 						<div className="col-6">
-							<CourseContent data={teacherCourses} title={'Edutalk Teacher'} />
+							<CourseContent data={this.props.bestClassRoomsByTeacher} title={'Edutalk Teacher'} />
 						</div>
 						<div className="col-6">
-							<CourseContent data={teacherCourses} title={'Edutalk Center'} />
+							<CourseContent data={this.props.bestClassRoomsByCenter} title={'Edutalk Center'} />
 						</div>
 					</div>
 				</div>
@@ -88,4 +62,17 @@ class MostSelectedCourses extends React.Component {
 	}
 }
 
-export default MostSelectedCourses;
+const mapStateToProps = state => ({
+	bestClassRoomsByCenter: state.BestClassRoomsByCenter,
+	bestClassRoomsByTeacher: state.BestClassRoomsByTeacher,
+});
+
+const mapDispatchToProps = dispatch => ({
+	getBestClassRoomsByCenter: payload => dispatch(getBestClassRoomsByCenter(payload)),
+	getBestClassRoomsByTeacher: payload => dispatch(getBestClassRoomsByTeacher(payload)),
+});
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps,
+)(MostSelectedCourses);

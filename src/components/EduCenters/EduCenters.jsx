@@ -13,6 +13,10 @@ class EduCenters extends React.Component {
 	}
 
 	render() {
+		if (this.props.data == null) {
+			return null;
+		}
+		const { classrooms } = this.props.data;
 		return (
 			<div className="container">
 				<div className="row edu-center">
@@ -30,11 +34,11 @@ class EduCenters extends React.Component {
 							</div>
 						)}
 
-						{this.props.data && this.props.data.data && this.props.data.data.map((item, index) => {
+						{classrooms && classrooms.data && classrooms.data.map((item, index) => {
 							if (index > 5) {
 								return null;
 							}
-							
+
 							return (
 								<CourseItem data={item} key={index} />
 							);

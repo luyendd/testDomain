@@ -5,13 +5,15 @@ import store from 'redux/store';
 function* postQuery({ url, data }) {
     const param = {
         ...data,
-        Authorization: ` Bearer ${store.getState().UserInfo.token}`,
+        Authorization: `Bearer ${store.getState().UserInfo.token}`,
     };
+    console.log(url,store.getState().UserInfo);
+    
 
     let body = new FormData();
     body.append('json', JSON.stringify(param));
 
-    const response = yield fetch(`http://127.0.0.1:8000/api/${url}`, {
+    const response = yield fetch(`https://edutalk.edu.vn/api/${url}`, {
         method: "POST",
         body: body,
         credentials: "same-origin",
@@ -32,8 +34,6 @@ function* postQuery({ url, data }) {
 
 function* fetchGlobalPostRequest(action) {
     try {
-        console.log(action);
-
         const payload = yield call(postQuery, action.payload);
         console.log(payload);
 

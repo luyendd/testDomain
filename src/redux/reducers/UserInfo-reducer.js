@@ -3,14 +3,18 @@ export const USER_INFO_FAIL = 'USER_INFO_FAIL';
 
 const initialState = {
     user: null,
-    token: ''
+    token: '',
 };
 
 export const UserInfo = (state = initialState, { type, payload }) => {
     switch (type) {
         case USER_INFO_SUCCEED:
+            console.log(payload);
+            
             return payload;
         case USER_INFO_FAIL:
+            console.log('???');
+            
             return payload ? payload : state;
         default:
             return state;

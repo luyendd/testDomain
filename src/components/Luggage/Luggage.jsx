@@ -31,7 +31,7 @@ class Luggage extends React.Component {
 									return null;
 								}
 								return (
-									<SpecialItem key={index} data={item} img={item.featured_image.path_string} />
+									<SpecialItem key={index} data={item} img={item.featured_image && item.featured_image.path_string} />
 								);
 							})}
 						</div>

@@ -12,18 +12,28 @@ class CourseContent extends React.Component {
 	}
 
 	render() {
+		if (this.props.data == null) {
+			return null;
+		}
+
+		const { classrooms } = this.props.data;
+		console.log(classrooms.data);
+
 		return (
 			<div className="most-seleted-content">
 				<div className="most-seleted-title">
 					<h6>{this.props.title}</h6>
 					<Link className="view-all" to="/">
-						Xem tất cả
-								<FiChevronsRight className="icon-view-all" />
+						<span>Xem tất cả</span>
+						<FiChevronsRight className="icon-view-all" />
 					</Link>
 				</div>
-				{this.props.data.map((item, index) => {
+				{classrooms.data.map((item, index) => {
+					if (index > 2) {
+						return null;
+					}
 					return (
-						<CourseContentItem key={index} {...item} />
+						<CourseContentItem key={index} data={item} />
 					);
 				})}
 			</div>

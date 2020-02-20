@@ -1,67 +1,93 @@
 @import "global/styles.scss";
 
 .most-selected-item {
-    flex-direction: row;
-    background-image: linear-gradient(to right, #c9c4c4 33%, rgba(255, 255, 255, 0) 0%);
-    background-position: bottom;
-    background-size: 28px 1px;
-    background-repeat: repeat-x;
-    height: 100%;
-    padding-bottom: 30px;
-    padding-top: 30px;
+  flex-direction: row;
+  background-image: linear-gradient(to right, #c9c4c4 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 28px 1px;
+  background-repeat: repeat-x;
+  height: 100%;
+  padding-bottom: 30px;
+  padding-top: 30px;
 
-    .image-container {
-      height: auto;
-      margin-bottom: 0;
+  .image-container {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .most-selected-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    font-size: 14px;
+
+    .course-name {
+      font-size: 16px;
+      color: #343333;
+      font-weight: 500;
+      margin-bottom: 5px;
+
+      span.name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+      }
     }
 
-    .most-selected-detail {
+    .teacher-name {
+      color: #888585;
+    }
+
+    .users-icon,
+    .money-icon,
+    .map-icon {
+      margin-right: 10px;
+      color: #4d658b;
+      width: 20px;
+    }
+
+    .location-item {
+      margin-top: 5px;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding-left: 20px;
-      font-size: 14px;
-
-      .course-name {
-        font-size: 16px;
-        color: #343333;
-        font-weight: 500;
-      }
-
-      .teacher-name {
-        color: #888585;
-      }
 
       .map-icon {
-		font-size: 15px;
+        width: 21px;
+        margin-top: 4px;
       }
 
-      .users-icon, .money-icon, .map-icon  {
-		margin-right: 10px;
-        color: #4d658b;
-        width: 20px;
-      }
-    }
-
-    .most-selected-item-rate {
-      color: $font-color-primary;
-      align-self: center;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      padding-right: 0;
-
-      h6 {
-        margin-bottom: 3px;
-        font-weight: bold;
-      }
-
-      .rate {
-        font-size: 14px;
-      }
-
-      .course-item-detail-vote .fas.fa-star {
-        font-size: 18px;
+      .location {
+        max-width: 217px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
       }
     }
   }
+
+  .most-selected-item-rate {
+    color: $font-color-primary;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+
+    h6 {
+      margin-bottom: 3px;
+      font-weight: bold;
+    }
+
+    .rate {
+      font-size: 14px;
+    }
+
+    .course-item-detail-vote .fas.fa-star {
+      font-size: 18px;
+    }
+  }
+}

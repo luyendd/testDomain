@@ -1,6 +1,8 @@
 import React from 'react';
-import { FaMapMarkerAlt, FaStar, FaUsers, FaRegMoneyBillAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaUsers, FaRegMoneyBillAlt } from 'react-icons/fa';
 import ImageComp from 'components/ImageComp/ImageComp';
+import { formatNumber } from 'ultis/commom';
+import { renderStarts } from 'ultis/display';
 import './CourseContentItem.scss';
 
 class CourseContentItem extends React.Component {
@@ -11,40 +13,38 @@ class CourseContentItem extends React.Component {
 	}
 
 	render() {
+		const data = this.props.data;
+
 		return (
 			<div className="row most-selected-item">
 				<div className="col-3">
-					<ImageComp src={this.props.courseImg} />
+					<ImageComp local={false} src={data.image_course.path} />
 				</div>
 				<div className="col-6 most-selected-detail">
 					<div className="course-name">
-						<span>Tên khoá học</span>
+						<span className="name">{data.name}</span>
 					</div>
 					<div>
-						<span className="teacher-name">{this.props.teacherName}</span>
+						<span className="teacher-name">{data.teacher.name}</span>
 					</div>
-					<div>
+					<div className="location-item">
 						<FaMapMarkerAlt className="map-icon" />
-						<span className="location">{this.props.location}</span>
+						<span className="location">{data.address}</span>
 					</div>
 					<div>
 						<FaUsers className="users-icon" />
-						<span>{this.props.emptySlot} / {this.props.totalSlot}</span>
+						<span>{this.props.current_student} / {this.props.total_student}</span>
 					</div>
 					<div>
 						<FaRegMoneyBillAlt className="money-icon" />
-						<span>{this.props.price}</span>
+						<span>{formatNumber(this.props.data.course.fees * (1 - this.props.data.course.sale / 100))}</span>
 					</div>
 				</div>
 				<div className="col-3 most-selected-item-rate">
-					<h6>52</h6>
+					<h6>{data.count_rate}</h6>
 					<span className="rate">Đánh giá</span>
 					<div className="course-item-detail-vote">
-						<FaStar />
-						<FaStar />
-						<FaStar />
-						<FaStar />
-						<FaStar />
+						{renderStarts(data.avg_rate / 2)}
 					</div>
 				</div>
 			</div>

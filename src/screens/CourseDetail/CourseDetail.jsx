@@ -41,7 +41,7 @@ class CourseDetail extends React.Component {
 
 	componentDidMount() {
 		const payload = {
-			url: `v3/courses/detail/${this.props.match.params.slug}?lop=${this.props.match.params.classId}`,
+			url: `v3/courses/${this.props.match.params.slug}?lop=${this.props.match.params.classId}`,
 		};
 		this.props.getCourseDetail(payload);
 	}
