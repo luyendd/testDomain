@@ -114,11 +114,15 @@ class Main extends React.Component {
 	}
 }
 
+const mapStateToProps = state => ({
+    userInfo: state.UserInfo,
+});
+
 const mapDispatchToProps = dispatch => ({
 	initMain: () => dispatch(initMain()),
 });
 
 export default connect(
-	null,
+	mapStateToProps,
 	mapDispatchToProps,
 )(Main);

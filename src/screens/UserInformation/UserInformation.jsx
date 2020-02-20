@@ -7,6 +7,7 @@ import AccountCourses from 'components/UserComp/AccountCourses/AccountCourses';
 import AccountInfo from 'components/UserComp/AccountInfo/AccountInfo';
 import { getUserInformation } from './redux';
 import { connect } from 'react-redux';
+import store from 'redux/store';
 
 const topBars = [
     {
@@ -44,7 +45,6 @@ class UserInformation extends React.Component {
     componentDidMount() {
         const params = {
             url: 'v3/students',
-            data: {}
         };
 
         this.props.getUserInformation(params);

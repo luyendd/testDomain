@@ -1,5 +1,6 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { QUERY_GET_GLOBAL } from 'redux/actions';
+import store from 'redux/store';
 
 function* getQuery({ url, data }) {
     // const myHeaders = new Headers();
@@ -12,7 +13,11 @@ function* getQuery({ url, data }) {
     // });
 
     // Default options are marked with *
-    const response = yield fetch(`https://edutalk.edu.vn/api/${url}`)
+    const response = yield fetch(`https://edutalk.edu.vn/api/${url}`, {
+        headers: {
+            'Authorization': `Bearer ${store.getState().UserInfo.token}`,
+        },
+    })
         .then(r => {
             return r.json().then(data => ({ ok: r.ok, status: r.status, body: data }))
         })
